@@ -27,12 +27,23 @@
   padding: 0;
 }
 
+html, body, #root, .app-shell {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--canvas-bg);
   color: var(--text-primary);
   font-family: var(--font-body);
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+section, footer {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a {

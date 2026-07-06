@@ -194,7 +194,7 @@
     padding: 80px 20px;
   }
   .playground-header-center {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   .playground-title-main {
     font-size: 2.5rem;
@@ -202,23 +202,44 @@
   }
   .playground-2x3-wrapper {
     grid-template-columns: 1fr;
-    gap: 60px 20px; /* Reduced gap to look cleaner when stacked */
+    gap: 48px;
     padding: 0;
+  }
+  .grid-cell {
+    aspect-ratio: auto;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .cell-visual-container {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 5 / 4;
+    background-color: var(--studio-grey);
+    border: 1px solid var(--border-grey);
+    border-radius: 4px;
+    overflow: hidden;
   }
   .custom-annotation-container {
     position: relative !important;
-    left: 0 !important;
-    right: 0 !important;
-    top: 0 !important;
-    bottom: 0 !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
     transform: none !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-bottom: 12px;
-    flex-direction: row !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .annotation-text {
+    font-size: 1.3rem;
   }
   .annotation-arrow {
-    display: none; /* Hide arrows on mobile to keep layout clean */
+    display: none;
   }
 }
 

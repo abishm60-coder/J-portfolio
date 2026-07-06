@@ -70,11 +70,29 @@
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    padding: 12px 0;
+  }
   .header-container {
-    grid-template-columns: 1fr auto;
-    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px;
   }
   .site-logo-left {
     display: none;
+  }
+  .site-logo-center {
+    margin-bottom: 4px;
+  }
+  .header-nav {
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .nav-link {
+    font-size: 0.75rem;
   }
 }

@@ -194,9 +194,12 @@
 }
 
 @media (max-width: 992px) {
+  .hero-section {
+    padding: 100px 24px 60px 24px;
+  }
   .hero-container-inner {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 40px;
   }
   .polaroid-wrapper-left, .polaroid-wrapper-right {
     justify-content: center;
@@ -208,6 +211,47 @@
     transform: rotate(3deg) translateY(0);
   }
   .hero-title-main {
-    font-size: 4rem;
+    font-size: 4.5rem;
+    text-align: center;
+  }
+  .hero-status-bottom-left {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 40px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title-main {
+    font-size: 3.2rem;
+  }
+  .handwriting-annotation-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    margin-bottom: 12px;
+    transform: none;
+  }
+  .curved-arrow {
+    transform: rotate(-90deg) scale(0.8);
+  }
+  .annotation-handwriting {
+    text-align: center;
+    font-size: 1.1rem;
+    white-space: normal;
+  }
+  .hero-sub-titles {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .sub-left, .sub-right {
+    text-align: center;
+    font-size: 1.1rem;
   }
 }

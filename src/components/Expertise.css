@@ -695,6 +695,13 @@
 }
 
 @media (max-width: 768px) {
+  .expertise-title-main {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+  .expertise-header-center {
+    margin-bottom: 60px;
+  }
   .folders-horizontal-grid {
     grid-template-columns: 1fr;
     gap: 110px; /* Leave space for popups when stacked */

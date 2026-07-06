@@ -94,6 +94,16 @@
   }
 }
 
+@media (max-width: 768px) {
+  .creations-title-main {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+  .creations-header-center {
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: 576px) {
   .polaroid-grid-mock {
     grid-template-columns: 1fr;

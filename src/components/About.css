@@ -131,6 +131,16 @@
   }
 }
 
+@media (max-width: 768px) {
+  .about-headline-text {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+  .about-header-center {
+    margin-bottom: 36px;
+  }
+}
+
 @media (max-width: 576px) {
   .filmstrip-content-gallery-six {
     grid-template-columns: repeat(2, 1fr);

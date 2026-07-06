@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
             </h1>
             <div className="hero-sub-titles">
               <span className="sub-left">JERFIN</span>
-              <span className="sub-right">CREATIVE PROJECT DESIGNER</span>
+              <span className="sub-right">CREATIVE PRODUCT DESIGNER</span>
             </div>
           </div>
         </div>

@@ -1,0 +1,101 @@
+.creations-section {
+  position: relative;
+  background-color: var(--canvas-bg);
+  padding: 120px 40px;
+}
+
+.creations-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.creations-header-center {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.creations-title-main {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 3.5rem;
+  letter-spacing: -1.5px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.creations-subtitle-handwriting {
+  font-family: var(--font-handwriting);
+  font-size: 1.8rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+/* Polaroid Mock Grid layout exactly matching mock screenshot style */
+.polaroid-grid-mock {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  align-items: flex-end;
+}
+
+.polaroid-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Overlap torn paper graphic at the top of Card 1 */
+.torn-overlay-header {
+  position: absolute;
+  top: -15px;
+  width: 140px;
+  height: 24px;
+  background-color: #bfb39a;
+  opacity: 0.8;
+  transform: rotate(-3deg);
+  z-index: 5;
+  clip-path: polygon(0% 15%, 20% 0%, 40% 12%, 60% 3%, 80% 15%, 100% 5%, 98% 85%, 80% 95%, 50% 88%, 20% 98%, 0% 80%);
+}
+
+/* Overlapping Badge on Card 3 */
+.floating-j-badge {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--orange-accent);
+  color: var(--canvas-bg);
+  font-family: var(--font-mono);
+  font-weight: 900;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(255, 85, 0, 0.4);
+  z-index: 5;
+}
+
+/* Stagger card heights slightly */
+.p-item-1 { transform: rotate(-3deg) translateY(-20px); }
+.p-item-2 { transform: rotate(2deg) translateY(20px); }
+.p-item-3 { transform: rotate(-2deg) translateY(0px); }
+.p-item-4 { transform: rotate(3deg) translateY(10px); }
+
+@media (max-width: 992px) {
+  .polaroid-grid-mock {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .p-item-1, .p-item-2, .p-item-3, .p-item-4 {
+    transform: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .polaroid-grid-mock {
+    grid-template-columns: 1fr;
+  }
+}

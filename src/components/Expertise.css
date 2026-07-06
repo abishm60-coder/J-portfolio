@@ -1,0 +1,703 @@
+.expertise-section {
+  padding: 120px 40px;
+  background-color: var(--canvas-bg);
+}
+
+.expertise-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.expertise-header-center {
+  text-align: center;
+  margin-bottom: 120px; /* More spacing to account for pop-up cards */
+}
+
+.expertise-title-main {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 3.5rem;
+  letter-spacing: -1.5px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+/* Horizontal Grid for exactly 3 folder tabs */
+.folders-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  justify-items: center;
+  margin-top: 60px;
+}
+
+.horizontal-folder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 340px;
+  cursor: pointer;
+}
+
+.folder-container-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Layering System */
+.folder-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.folder-pop-contents {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 90%;
+  height: 85%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.folder-front {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  z-index: 3;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Folder Shapes styling */
+.folder-back-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.folder-back-svg path {
+  fill: #222222; /* Black/dark grey by default */
+  transition: fill 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.folder-front-flap {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px 24px 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d2d2d; /* Medium grey by default */
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4), inset 0 2px 2px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transform-origin: bottom center;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.folder-tab-label {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #777777; /* Grey text by default */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  pointer-events: none;
+  transition: color 0.4s ease;
+}
+
+/* Hover Transformations */
+.horizontal-folder-card:hover .folder-back {
+  transform: scale(0.98);
+}
+
+.horizontal-folder-card:hover .folder-back-svg path {
+  fill: #ff5500; /* Bright orange on hover */
+}
+
+.horizontal-folder-card:hover .folder-front-flap {
+  transform: rotateX(-15deg) scaleY(0.98);
+  background-color: var(--hover-bg); /* Colorful front on hover */
+  border-color: rgba(255, 255, 255, 0.15);
+  filter: brightness(1);
+}
+
+.horizontal-folder-card:hover .folder-tab-label {
+  color: #121212; /* Dark text when hovered */
+}
+
+/* Pop Cards Base styling */
+.pop-card {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Position mapping for the cards inside the folder - tucked inside by default */
+.pop-card-left {
+  width: 45%;
+  height: 70%;
+  left: 5%;
+  bottom: 0;
+  transform: translateY(160px) rotate(-4deg) scale(0.8);
+  z-index: 10;
+  opacity: 0;
+}
+
+.pop-card-center {
+  width: 50%;
+  height: 85%;
+  left: 25%;
+  bottom: 0;
+  transform: translateY(160px) rotate(0deg) scale(0.8);
+  z-index: 11;
+  opacity: 0;
+}
+
+.pop-card-right {
+  width: 48%;
+  height: 75%;
+  right: 5%;
+  bottom: 0;
+  transform: translateY(160px) rotate(4deg) scale(0.8);
+  z-index: 9;
+  opacity: 0;
+}
+
+/* Pop transitions on hover */
+.horizontal-folder-card:hover .pop-card-left {
+  transform: translateY(-90px) translateX(-45px) rotate(-16deg) scale(1.15);
+  opacity: 1;
+  z-index: 12;
+}
+
+.horizontal-folder-card:hover .pop-card-center {
+  transform: translateY(-130px) rotate(-2deg) scale(1.2);
+  opacity: 1;
+  z-index: 14;
+}
+
+.horizontal-folder-card:hover .pop-card-right {
+  transform: translateY(-100px) translateX(45px) rotate(14deg) scale(1.15);
+  opacity: 1;
+  z-index: 13;
+}
+
+/* Label below the folder */
+.folder-card-label {
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--text-secondary);
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.horizontal-folder-card:hover .folder-card-label {
+  color: var(--orange-accent);
+}
+
+/* --- High-Fidelity Mockups Content Styling --- */
+
+/* 1. Dashboard Mock */
+.dashboard-mock {
+  background-color: #f7f7f9;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-mock .mock-header {
+  height: 8px;
+  background-color: #e5e5ea;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  padding-left: 6px;
+}
+.dashboard-mock .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+.dashboard-mock .dot.red { background-color: #ff3b30; }
+.dashboard-mock .dot.yellow { background-color: #ffcc00; }
+.dashboard-mock .dot.green { background-color: #34c759; }
+
+.dashboard-mock .mock-body {
+  display: flex;
+  flex: 1;
+  padding: 6px;
+}
+.dashboard-mock .dashboard-sidebar {
+  width: 14px;
+  border-right: 1px solid #e5e5ea;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 4px;
+}
+.dashboard-mock .sidebar-item {
+  height: 6px;
+  background-color: #e5e5ea;
+  border-radius: 1px;
+}
+.dashboard-mock .sidebar-item.active {
+  background-color: var(--orange-accent);
+}
+.dashboard-mock .dashboard-content {
+  flex: 1;
+  padding-left: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.dashboard-mock .content-title {
+  font-size: 8px;
+  font-weight: bold;
+  color: #1c1c1e;
+}
+.dashboard-mock .content-chart {
+  height: 20px;
+  border-bottom: 1px solid #e5e5ea;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  padding-bottom: 2px;
+}
+.dashboard-mock .chart-bar {
+  flex: 1;
+  background-color: #c7c7cc;
+  border-radius: 1px 1px 0 0;
+}
+.dashboard-mock .chart-bar:hover, 
+.horizontal-folder-card:hover .dashboard-mock .chart-bar {
+  background-color: #121212;
+}
+.dashboard-mock .content-grid {
+  display: flex;
+  gap: 4px;
+}
+.dashboard-mock .grid-box {
+  flex: 1;
+  height: 12px;
+  background-color: #e5e5ea;
+  border-radius: 2px;
+}
+
+/* 2. Phone Mock */
+.phone-mock {
+  background-color: #0b1a30;
+  border: 3px solid #1a1a1a;
+  border-radius: 12px;
+}
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #fff;
+  font-family: var(--font-body);
+}
+.phone-island {
+  width: 24px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+.phone-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 6px;
+  opacity: 0.8;
+  padding: 0 4px;
+}
+.phone-wallet-card {
+  background: linear-gradient(135deg, #1f3c75, #0f1c3f);
+  border-radius: 6px;
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.phone-wallet-card .wallet-card-chip {
+  width: 8px;
+  height: 6px;
+  background-color: #d4af37;
+  border-radius: 1px;
+}
+.phone-wallet-card .wallet-card-balance {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+.phone-wallet-card .wallet-card-number {
+  font-size: 5px;
+  opacity: 0.6;
+  font-family: var(--font-mono);
+}
+.phone-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 4px;
+}
+.phone-actions .action-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.1);
+}
+.phone-transactions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.phone-transactions .transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(255,255,255,0.05);
+  padding: 4px;
+  border-radius: 4px;
+}
+.phone-transactions .t-icon {
+  font-size: 8px;
+}
+.phone-transactions .t-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 6px;
+}
+.phone-transactions .t-amount {
+  font-weight: bold;
+  color: #ff3b30;
+}
+
+/* 3. Blueprint Mock */
+.blueprint-mock {
+  background-color: #f7f4eb;
+  position: relative;
+}
+.blueprint-grid {
+  position: absolute;
+  inset: 0;
+  background-size: 6px 6px;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+}
+.blueprint-shapes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blueprint-shapes .b-shape {
+  position: absolute;
+  opacity: 0.2;
+}
+.blueprint-shapes .b-shape.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px dashed #121212;
+  top: 10px;
+  left: 10px;
+}
+.blueprint-shapes .b-shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid rgba(0,0,0,0.15);
+  bottom: 20px;
+  right: 10px;
+}
+.b-badge-round {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ff5500;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+.b-badge-text {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 7px;
+  color: #121212;
+  letter-spacing: -0.2px;
+}
+.b-badge-icons {
+  display: flex;
+  gap: 2px;
+  font-size: 6px;
+  color: #ff5500;
+  margin-top: 2px;
+}
+
+/* 4. Brand Guide Mock */
+.brand-guide-mock {
+  background-color: #f7f1e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.guide-cover {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d1ccc0;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.guide-cover .guide-title {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #121212;
+}
+.guide-cover .color-palette {
+  display: flex;
+  gap: 4px;
+}
+.guide-cover .color-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.guide-cover .guide-subtitle {
+  font-size: 5px;
+  color: #7f8c8d;
+}
+
+/* 5. Logo Badge Mock */
+.logo-badge-mock {
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.badge-inner {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.brand-logo-symbol {
+  width: 24px;
+  height: 24px;
+  background-color: var(--orange-accent);
+  color: #121212;
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.brand-logo-text {
+  font-family: var(--font-mono);
+  font-size: 6px;
+  letter-spacing: 0.5px;
+}
+.brand-badge-tag {
+  font-size: 5px;
+  background-color: rgba(255,255,255,0.15);
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+/* 6. Business Card Mock */
+.business-card-mock {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 10px;
+}
+.card-front {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-logo {
+  font-weight: 900;
+  font-size: 10px;
+  color: var(--orange-accent);
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.card-info .name {
+  font-size: 7px;
+  font-weight: bold;
+}
+.card-info .role {
+  font-size: 5px;
+  opacity: 0.5;
+}
+
+/* 7. Poster Mock */
+.poster-mock {
+  background-color: #fff;
+  position: relative;
+  padding: 8px;
+}
+.poster-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to bottom, transparent 95%, #ff5500 95%),
+                    linear-gradient(to right, transparent 95%, #ff5500 95%);
+  background-size: 20px 20px;
+  opacity: 0.05;
+}
+.poster-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.poster-huge-text {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 0.9;
+  letter-spacing: -0.5px;
+  color: #121212;
+}
+.poster-subtext {
+  font-size: 5px;
+  font-family: var(--font-mono);
+  color: #7f8c8d;
+}
+.poster-orange-block {
+  width: 15px;
+  height: 15px;
+  background-color: var(--orange-accent);
+}
+
+/* 8. Graphic Canvas Mock */
+.graphic-canvas-mock {
+  background-color: #121212;
+  padding: 6px;
+}
+.canvas-frame {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #262626;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.canvas-gradient {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 30%, #ff5500, #401000, #000);
+}
+.canvas-overlay-shapes .oval-shape {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.08);
+  top: 20%;
+  left: 20%;
+  backdrop-filter: blur(2px);
+}
+
+/* 9. Typography Specimen Mock */
+.typography-specimen-mock {
+  background-color: #fcfcfc;
+  padding: 8px;
+}
+.specimen-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.specimen-title {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #121212;
+}
+.specimen-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.specimen-lines .s-line {
+  height: 2px;
+  background-color: #e5e5ea;
+  border-radius: 1px;
+}
+.specimen-lines .s-line:first-child {
+  width: 80%;
+}
+.specimen-lines .s-line:nth-child(2) {
+  width: 95%;
+}
+.specimen-lines .s-line:last-child {
+  width: 60%;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 992px) {
+  .folders-horizontal-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .folders-horizontal-grid {
+    grid-template-columns: 1fr;
+    gap: 140px; /* Leave space for popups when stacked */
+  }
+}
+

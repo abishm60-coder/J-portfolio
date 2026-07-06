@@ -1,0 +1,218 @@
+.playground-section {
+  padding: 120px 140px; /* Increased side padding to prevent cut-off annotations */
+  background-color: var(--canvas-bg);
+}
+
+.playground-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.playground-header-center {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.playground-title-main {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 3.5rem;
+  letter-spacing: -1.5px;
+  color: var(--orange-accent);
+  text-transform: uppercase;
+}
+
+/* 2x3 Grid Layout */
+.playground-2x3-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 80px 60px; /* Increased row gap to give top/bottom annotations room */
+  margin-top: 40px;
+}
+
+.grid-cell {
+  position: relative;
+  background-color: var(--studio-grey);
+  border: 1px solid var(--border-grey);
+  border-radius: 4px;
+  overflow: visible;
+  aspect-ratio: 5 / 4;
+}
+
+.cell-visual-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playground-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.grid-cell:hover .playground-img {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+/* Custom annotations wrapper styles */
+.custom-annotation-container {
+  position: absolute;
+  font-family: var(--font-handwriting);
+  font-size: 1.5rem;
+  color: var(--orange-accent);
+  display: flex;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.annotation-text {
+  white-space: nowrap;
+}
+
+.annotation-arrow {
+  width: 50px;
+  height: auto;
+}
+
+/* Positioning labels and arrows to point to the corners of the boxes */
+.label-letterforms {
+  left: -110px;
+  top: -20px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.label-letterforms .annotation-arrow {
+  width: 60px;
+  margin-top: 2px;
+  margin-right: -25px;
+}
+
+.label-photography {
+  top: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center;
+}
+.label-photography .annotation-arrow {
+  width: 32px;
+  margin-top: 2px;
+}
+
+.label-journeys {
+  right: -55px;
+  top: -75px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.label-journeys .annotation-arrow {
+  width: 55px;
+  margin-top: 2px;
+  margin-left: -20px;
+}
+
+.label-portraits {
+  left: -105px;
+  bottom: -35px;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+.label-portraits .annotation-arrow {
+  width: 60px;
+  margin-bottom: 2px;
+  margin-right: -20px;
+}
+
+.label-curiosity {
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.label-curiosity .annotation-arrow {
+  width: 32px;
+  margin-bottom: 2px;
+}
+
+.label-nature {
+  right: -95px;
+  bottom: -20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.label-nature .annotation-arrow {
+  width: 55px;
+  margin-top: 2px;
+  margin-left: -20px;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 1200px) {
+  .playground-section {
+    padding: 100px 80px;
+  }
+  .playground-2x3-wrapper {
+    gap: 80px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .playground-section {
+    padding: 80px 60px;
+  }
+  .playground-2x3-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px 40px;
+  }
+  .label-letterforms {
+    left: -50px;
+    top: -55px;
+  }
+  .label-portraits {
+    left: -50px;
+    bottom: -65px;
+  }
+  .label-nature {
+    right: -50px;
+    bottom: -65px;
+  }
+}
+
+@media (max-width: 768px) {
+  .playground-section {
+    padding: 80px 20px;
+  }
+  .playground-2x3-wrapper {
+    grid-template-columns: 1fr;
+    gap: 100px 20px;
+    padding: 0;
+  }
+  .custom-annotation-container {
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 12px;
+    flex-direction: row !important;
+  }
+  .annotation-arrow {
+    display: none; /* Hide arrows on mobile to keep layout clean */
+  }
+}
+
+

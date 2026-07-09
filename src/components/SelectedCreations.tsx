@@ -21,7 +21,7 @@ interface Project {
   highlighted?: boolean;
 }
 
-const projects: Project[] = [
+const projectsList: Project[] = [
   {
     id: 'proj-1',
     projectNumber: 'PROJECT 01',
@@ -88,23 +88,123 @@ const projects: Project[] = [
   },
 ];
 
-export const SelectedCreations: React.FC = () => {
+interface PolaroidCard {
+  id: string;
+  image: string;
+  label: string;
+}
+
+const polaroidCards: PolaroidCard[] = [
+  {
+    id: 'proj-1',
+    image: digitalImg,
+    label: 'digital experience',
+  },
+  {
+    id: 'proj-7',
+    image: brandImg,
+    label: 'campaign design',
+  },
+  {
+    id: 'proj-6',
+    image: curiosityImg,
+    label: 'brand identity',
+  },
+  {
+    id: 'proj-8',
+    image: campaignImg,
+    label: 'interface design',
+  },
+];
+
+interface SelectedCreationsProps {
+  variant?: 'home' | 'work';
+  onProjectSelect?: (projectId: string) => void;
+}
+
+export const SelectedCreations: React.FC<SelectedCreationsProps> = ({ 
+  variant = 'work', 
+  onProjectSelect 
+}) => {
+  if (variant === 'home') {
+    return (
+      <section id="work" className="creations-section creations-home-variant">
+        <div className="creations-container">
+          
+          <div className="creations-header-center">
+            <h2 className="creations-title-main">SELECTED CREATIONS</h2>
+            <p className="creations-subtitle-lowercase">
+              a collection of products, brands, and visual experiences I've crafted over the years.
+            </p>
+          </div>
+
+          <div className="polaroids-wrapper">
+            {polaroidCards.map((card, index) => {
+              const positionClass = index % 2 === 0 ? 'offset-down' : 'offset-up';
+              return (
+                <div 
+                  key={card.id} 
+                  className={`polaroid-card ${positionClass}`}
+                  onClick={() => onProjectSelect?.(card.id)}
+                >
+                  {index === 0 && (
+                    <div className="torn-paper-accent"></div>
+                  )}
+                  
+                  {index === 2 && (
+                    <div className="toast-sticker-overlay">🥪</div>
+                  )}
+
+                  <div className="polaroid-image-container">
+                    <img 
+                      src={card.image} 
+                      alt={card.label} 
+                      className="polaroid-image" 
+                    />
+                  </div>
+                  
+                  <div className="polaroid-caption">
+                    {card.label}
+                  </div>
+                </div>
+              );
+            })}
+
+            <div className="pixel-j-sticker">
+              <svg viewBox="0 0 100 100" width="100" height="100">
+                <circle cx="50" cy="50" r="44" fill="#ff5500" />
+                <path 
+                  d="M 40,32 H 68 V 40 H 60 V 64 H 44 V 56 H 52 V 40 H 40 Z" 
+                  fill="#000000" 
+                />
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    );
+  }
+
+  // Work page variant (3x3 grid)
   return (
-    <section id="work" className="creations-section">
+    <section id="work" className="creations-section creations-work-variant">
       <div className="creations-container">
         
         <div className="creations-header-center">
           <h2 className="creations-title-main">SELECTED CREATIONS</h2>
-          <p className="creations-subtitle-handwriting">
-            a collection of products, brands, and visual experiences I've crafted over the years
+          <p className="creations-subtitle-lowercase">
+            a collection of products, brands, and visual experiences I've crafted over the years.
           </p>
         </div>
 
         <div className="creations-grid">
-          {projects.map((project) => (
+          {projectsList.map((project) => (
             <div 
               key={project.id} 
               className={`creation-grid-item ${project.highlighted ? 'highlighted' : ''}`}
+              onClick={() => onProjectSelect?.(project.id)}
+              style={{ cursor: 'pointer' }}
             >
               <div className="creation-image-wrapper">
                 <img 

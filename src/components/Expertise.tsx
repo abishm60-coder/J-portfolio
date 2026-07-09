@@ -20,7 +20,6 @@ export const Expertise: React.FC = () => {
               {/* 1. Folder Back */}
               <div className="folder-back">
                 <svg viewBox="0 0 320 240" className="folder-back-svg">
-                  {/* Folder back body path (color controlled by CSS fill) */}
                   <path d="M 25 30 A 15 15 0 0 1 40 15 L 120 15 A 15 15 0 0 1 135 30 L 145 40 A 15 15 0 0 0 160 50 L 295 50 A 15 15 0 0 1 310 65 L 310 225 A 15 15 0 0 1 295 240 L 25 240 A 15 15 0 0 1 10 225 L 10 45 A 15 15 0 0 1 25 30 Z" />
                 </svg>
               </div>
@@ -79,8 +78,8 @@ export const Expertise: React.FC = () => {
                       <div className="transaction-item">
                         <div className="t-icon">🛒</div>
                         <div className="t-info">
-                          <span className="t-name">Store</span>
-                          <span className="t-amount">-45 €</span>
+                           <span className="t-name">Store</span>
+                           <span className="t-amount">-45 €</span>
                         </div>
                       </div>
                     </div>
@@ -105,10 +104,11 @@ export const Expertise: React.FC = () => {
 
               </div>
 
-              {/* 3. Folder Front */}
+              {/* 3. Folder Front (SVG path matching the back flap to create the layered tab look) */}
               <div className="folder-front">
-                <div className="folder-front-flap" style={{ '--hover-bg': '#fcd5a5' } as React.CSSProperties}>
-                </div>
+                <svg viewBox="0 0 320 240" className="folder-front-svg">
+                  <path d="M 25 30 A 15 15 0 0 1 40 15 L 120 15 A 15 15 0 0 1 135 30 L 145 40 A 15 15 0 0 0 160 50 L 295 50 A 15 15 0 0 1 310 65 L 310 225 A 15 15 0 0 1 295 240 L 25 240 A 15 15 0 0 1 10 225 L 10 45 A 15 15 0 0 1 25 30 Z" />
+                </svg>
               </div>
 
             </div>
@@ -164,10 +164,11 @@ export const Expertise: React.FC = () => {
 
               </div>
 
-              {/* 3. Folder Front */}
+              {/* 3. Folder Front (SVG path matching the back flap to create the layered tab look) */}
               <div className="folder-front">
-                <div className="folder-front-flap" style={{ '--hover-bg': '#fcc380' } as React.CSSProperties}>
-                </div>
+                <svg viewBox="0 0 320 240" className="folder-front-svg">
+                  <path d="M 25 30 A 15 15 0 0 1 40 15 L 120 15 A 15 15 0 0 1 135 30 L 145 40 A 15 15 0 0 0 160 50 L 295 50 A 15 15 0 0 1 310 65 L 310 225 A 15 15 0 0 1 295 240 L 25 240 A 15 15 0 0 1 10 225 L 10 45 A 15 15 0 0 1 25 30 Z" />
+                </svg>
               </div>
 
             </div>
@@ -222,10 +223,11 @@ export const Expertise: React.FC = () => {
 
               </div>
 
-              {/* 3. Folder Front */}
+              {/* 3. Folder Front (SVG path matching the back flap to create the layered tab look) */}
               <div className="folder-front">
-                <div className="folder-front-flap" style={{ '--hover-bg': '#fcd19c' } as React.CSSProperties}>
-                </div>
+                <svg viewBox="0 0 320 240" className="folder-front-svg">
+                  <path d="M 25 30 A 15 15 0 0 1 40 15 L 120 15 A 15 15 0 0 1 135 30 L 145 40 A 15 15 0 0 0 160 50 L 295 50 A 15 15 0 0 1 310 65 L 310 225 A 15 15 0 0 1 295 240 L 25 240 A 15 15 0 0 1 10 225 L 10 45 A 15 15 0 0 1 25 30 Z" />
+                </svg>
               </div>
 
             </div>

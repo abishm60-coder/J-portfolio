@@ -74,8 +74,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 85%;
+  height: 86%; /* Slightly shorter than 100% to reveal the back folder tab above it */
   z-index: 3;
+  transform-origin: bottom center;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -88,33 +89,20 @@
 }
 
 .folder-back-svg path {
-  fill: #222222; /* Black/dark grey by default */
+  fill: #4a4a4a; /* Flat grey tab/back exactly like mockup */
   transition: fill 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.folder-front-flap {
+.folder-front-svg {
   width: 100%;
   height: 100%;
-  border-radius: 24px 24px 12px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #2d2d2d; /* Medium grey by default */
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4), inset 0 2px 2px rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transform-origin: bottom center;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.4s ease, border-color 0.4s ease;
+  display: block;
+  filter: drop-shadow(0 -4px 12px rgba(0, 0, 0, 0.45));
 }
 
-.folder-tab-label {
-  font-family: var(--font-body);
-  font-weight: 800;
-  font-size: 1.2rem;
-  color: #777777; /* Grey text by default */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  pointer-events: none;
-  transition: color 0.4s ease;
+.folder-front-svg path {
+  fill: #8d8d8d; /* Flat grey folder front exactly like mockup */
+  transition: fill 0.4s ease;
 }
 
 /* Hover Transformations */
@@ -123,18 +111,15 @@
 }
 
 .horizontal-folder-card:hover .folder-back-svg path {
-  fill: #ff5500; /* Bright orange on hover */
+  fill: #4a4a4a; /* Keep original grey color on hover */
 }
 
-.horizontal-folder-card:hover .folder-front-flap {
-  transform: rotateX(-15deg) scaleY(0.98);
-  background-color: var(--hover-bg); /* Colorful front on hover */
-  border-color: rgba(255, 255, 255, 0.15);
-  filter: brightness(1);
+.horizontal-folder-card:hover .folder-front {
+  transform: rotateX(-18deg) scaleY(0.98); /* Tilt the front SVG path forward */
 }
 
-.horizontal-folder-card:hover .folder-tab-label {
-  color: #121212; /* Dark text when hovered */
+.horizontal-folder-card:hover .folder-front-svg path {
+  fill: #8d8d8d; /* Keep original grey color on hover */
 }
 
 /* Pop Cards Base styling */

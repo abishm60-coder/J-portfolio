@@ -2,6 +2,7 @@
   position: relative;
   background-color: var(--canvas-bg);
   padding: 120px 40px;
+  overflow: visible; /* Allow staggered cards and sticker shadow to bleed out nicely */
 }
 
 .creations-container {
@@ -14,25 +15,156 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 
 .creations-title-main {
-  font-family: var(--font-body);
-  font-weight: 800;
-  font-size: 3.5rem;
-  letter-spacing: -1.5px;
+  font-family: var(--font-heading); /* Bebas Neue */
+  font-weight: 400;
+  font-size: 4.5rem;
+  letter-spacing: 1px;
   color: var(--text-primary);
   text-transform: uppercase;
+  line-height: 1;
 }
 
-.creations-subtitle-handwriting {
-  font-family: var(--font-handwriting);
-  font-size: 1.8rem;
+.creations-subtitle-lowercase {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 300;
   color: var(--text-secondary);
-  margin-top: 8px;
+  margin-top: 12px;
+  letter-spacing: 0.5px;
 }
 
+/* ==========================================================================
+   Home Page Variant: Polaroid Staggered Layout
+   ========================================================================== */
+.polaroids-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding: 40px 0 80px 0;
+}
+
+.polaroid-card {
+  background-color: #ffffff;
+  padding: 16px 16px 36px 16px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15), box-shadow 0.4s ease;
+}
+
+/* Alternate vertical offsets exactly like the mockup */
+.polaroid-card.offset-down {
+  transform: translateY(30px) rotate(-1.5deg);
+}
+
+.polaroid-card.offset-up {
+  transform: translateY(-30px) rotate(1.5deg);
+}
+
+/* Soft hover physics */
+.polaroid-card.offset-down:hover {
+  transform: translateY(15px) scale(1.04) rotate(-0.5deg);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 6;
+}
+
+.polaroid-card.offset-up:hover {
+  transform: translateY(-45px) scale(1.04) rotate(0.5deg);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 6;
+}
+
+.polaroid-image-container {
+  width: 100%;
+  aspect-ratio: 1.1 / 1;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.polaroid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.polaroid-caption {
+  font-family: var(--font-handwriting); /* Caveat */
+  font-size: 1.9rem;
+  color: #111111;
+  text-align: right;
+  margin-top: 20px;
+  line-height: 1;
+  padding-right: 4px;
+}
+
+/* Kraft paper / torn paper accent on the digital experience card */
+.torn-paper-accent {
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  right: 20px;
+  height: 24px;
+  background-color: #d7c9b4; /* cardboard color */
+  opacity: 0.95;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transform: rotate(-1deg);
+  z-index: 3;
+  
+  /* Mask to simulate torn edges */
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 Q150,90 300,30 T600,60 T900,20 T1200,80 L1200,120 L0,120 Z' fill='%23000'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 Q150,90 300,30 T600,60 T900,20 T1200,80 L1200,120 L0,120 Z' fill='%23000'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+/* Small sticker on card 3 */
+.toast-sticker-overlay {
+  position: absolute;
+  left: -12px;
+  top: 38%;
+  font-size: 2.2rem;
+  transform: rotate(-15deg);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  z-index: 5;
+  pointer-events: none;
+  animation: subtleWiggle 6s ease-in-out infinite alternate;
+}
+
+/* Retro Pixel J Sticker overlapping brand identity and interface design */
+.pixel-j-sticker {
+  position: absolute;
+  left: 71.5%; /* Positioned right between Card 3 and Card 4 */
+  top: 48%;
+  transform: translate(-50%, -50%) rotate(12deg);
+  z-index: 10;
+  width: 90px;
+  height: 90px;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.polaroids-wrapper:hover .pixel-j-sticker {
+  transform: translate(-50%, -50%) rotate(16deg) scale(1.05);
+}
+
+@keyframes subtleWiggle {
+  0% { transform: rotate(-15deg) translateY(0); }
+  100% { transform: rotate(-8deg) translateY(-2px); }
+}
+
+/* ==========================================================================
+   Work Subpage Variant: 3x3 Project Grid
+   ========================================================================== */
 .creations-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -66,7 +198,6 @@
   transform: scale(1.02);
 }
 
-/* Subtitle and project number style matching Bebas Neue layout */
 .creation-meta {
   display: flex;
   justify-content: space-between;
@@ -78,7 +209,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Project 01 highlighted in orange exactly like mockup */
 .creation-grid-item.highlighted .creation-meta {
   color: var(--orange-accent);
 }
@@ -91,7 +221,50 @@
   font-weight: 400;
 }
 
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .pixel-j-sticker {
+    width: 80px;
+    height: 80px;
+    left: 71.5%;
+    top: 50%;
+  }
+}
+
 @media (max-width: 992px) {
+  .polaroids-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+    padding: 20px 0;
+  }
+  
+  .polaroid-card.offset-down,
+  .polaroid-card.offset-up {
+    transform: none; /* remove staggered offsets to prevent overlapping in grid wrap */
+  }
+  
+  .polaroid-card {
+    transform: rotate(1.2deg);
+  }
+  .polaroid-card:nth-child(even) {
+    transform: rotate(-1.2deg);
+  }
+  
+  .polaroid-card.offset-down:hover,
+  .polaroid-card.offset-up:hover {
+    transform: scale(1.03) translateY(-8px);
+  }
+
+  .pixel-j-sticker {
+    left: 50%;
+    top: 50%;
+    width: 75px;
+    height: 75px;
+  }
+
   .creations-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 20px;
@@ -100,18 +273,29 @@
 
 @media (max-width: 768px) {
   .creations-title-main {
-    font-size: 2.5rem;
-    letter-spacing: -1px;
+    font-size: 3rem;
   }
   .creations-section {
     padding: 80px 20px;
   }
-  .creations-grid-container {
-    padding: 12px;
-  }
 }
 
 @media (max-width: 576px) {
+  .polaroids-wrapper {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 20px 10px;
+  }
+  
+  .polaroid-card {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  
+  .pixel-j-sticker {
+    display: none; /* Hide J sticker on mobile for neat look */
+  }
+
   .creations-grid {
     grid-template-columns: 1fr;
     gap: 30px;

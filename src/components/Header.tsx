@@ -1,11 +1,19 @@
 import React from 'react';
 import './Header.css';
 
-export const Header: React.FC = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+interface HeaderProps {
+  onNavigate?: (sectionId: string) => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
+  const handleNavClick = (id: string) => {
+    if (onNavigate) {
+      onNavigate(id);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -16,15 +24,15 @@ export const Header: React.FC = () => {
           jerfin.design
         </div>
         
-        <div className="site-logo-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <div className="site-logo-center" onClick={() => handleNavClick('home')}>
           <div className="orange-logo-box">J</div>
         </div>
 
         <nav className="header-nav">
-          <button onClick={() => scrollToSection('work')} className="nav-link">work</button>
-          <button onClick={() => scrollToSection('about')} className="nav-link">journey</button>
-          <button onClick={() => scrollToSection('playground')} className="nav-link">playground</button>
-          <button onClick={() => scrollToSection('contact')} className="nav-link">contact</button>
+          <button onClick={() => handleNavClick('work')} className="nav-link">work</button>
+          <button onClick={() => handleNavClick('about')} className="nav-link">journey</button>
+          <button onClick={() => handleNavClick('playground')} className="nav-link">playground</button>
+          <button onClick={() => handleNavClick('contact')} className="nav-link">contact</button>
         </nav>
       </div>
     </header>

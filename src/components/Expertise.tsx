@@ -85,7 +85,7 @@ export const Expertise: React.FC = () => {
                         <div className="action-circle"></div>
                       </div>
                       <div className="phone-operations">
-                        <div className="ops-header">Operations <span className="all-link">></span></div>
+                        <div className="ops-header">Operations <span className="all-link">&gt;</span></div>
                         <div className="op-row">
                           <div className="op-avatar">👩</div>
                           <div className="op-info">

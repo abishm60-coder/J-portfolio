@@ -29,28 +29,32 @@ export const Expertise: React.FC = () => {
                 
                 {/* Left Card: Dashboard */}
                 <div className="pop-card pop-card-left dashboard-mock">
-                  <div className="mock-header">
-                    <span className="dot red"></span>
-                    <span className="dot yellow"></span>
-                    <span className="dot green"></span>
-                  </div>
-                  <div className="mock-body">
-                    <div className="dashboard-sidebar">
-                      <div className="sidebar-item active"></div>
-                      <div className="sidebar-item"></div>
-                      <div className="sidebar-item"></div>
+                  <div className="dashboard-sidebar">
+                    <div className="sidebar-logo">revenueX</div>
+                    <div className="sidebar-menu">
+                      <div className="menu-item active"></div>
+                      <div className="menu-item"></div>
+                      <div className="menu-item"></div>
                     </div>
-                    <div className="dashboard-content">
-                      <div className="content-title">Overview</div>
-                      <div className="content-chart">
-                        <div className="chart-bar" style={{ height: '60%' }}></div>
-                        <div className="chart-bar" style={{ height: '80%' }}></div>
-                        <div className="chart-bar" style={{ height: '40%' }}></div>
-                        <div className="chart-bar" style={{ height: '95%' }}></div>
+                  </div>
+                  <div className="dashboard-main">
+                    <div className="dashboard-header">
+                      <div className="search-bar"></div>
+                    </div>
+                    <div className="dashboard-body">
+                      <div className="performance-box">
+                        <span className="perf-title">Performance Overview</span>
+                        <span className="perf-subtitle">Your sales, growth, and insights — all in one</span>
+                        <div className="perf-chart">
+                          <div className="bar" style={{ height: '35%' }}></div>
+                          <div className="bar" style={{ height: '65%' }}></div>
+                          <div className="bar" style={{ height: '50%' }}></div>
+                          <div className="bar" style={{ height: '80%' }}></div>
+                        </div>
                       </div>
-                      <div className="content-grid">
-                        <div className="grid-box"></div>
-                        <div className="grid-box"></div>
+                      <div className="explore-box">
+                        <span className="explore-title">Explore your performance</span>
+                        <div className="explore-btn"></div>
                       </div>
                     </div>
                   </div>
@@ -62,24 +66,31 @@ export const Expertise: React.FC = () => {
                     <div className="phone-island"></div>
                     <div className="phone-header">
                       <span className="phone-time">1:47</span>
-                      <span className="phone-battery">⚡</span>
+                      <span className="phone-network">📶 🔋</span>
                     </div>
-                    <div className="phone-wallet-card">
-                      <div className="wallet-card-chip"></div>
-                      <div className="wallet-card-balance">72 356 €</div>
-                      <div className="wallet-card-number">•••• 4211</div>
-                    </div>
-                    <div className="phone-actions">
-                      <div className="action-circle"></div>
-                      <div className="action-circle"></div>
-                      <div className="action-circle"></div>
-                    </div>
-                    <div className="phone-transactions">
-                      <div className="transaction-item">
-                        <div className="t-icon">🛒</div>
-                        <div className="t-info">
-                           <span className="t-name">Store</span>
-                           <span className="t-amount">-45 €</span>
+                    <div className="phone-scrollable-content">
+                      <div className="phone-cashback">🛒 Cashback</div>
+                      <div className="phone-balance">72 356 ₴</div>
+                      <div className="phone-limits">
+                        <span>₴ 22 356</span>
+                        <span>₴ 50 000</span>
+                      </div>
+                      <div className="phone-card">
+                        <div className="card-chip"></div>
+                        <div className="card-logo">monobank</div>
+                      </div>
+                      <div className="phone-actions">
+                        <div className="action-circle"></div>
+                        <div className="action-circle"></div>
+                        <div className="action-circle"></div>
+                      </div>
+                      <div className="phone-operations">
+                        <div className="ops-header">Operations <span className="all-link">></span></div>
+                        <div className="op-row">
+                          <div className="op-avatar">👩</div>
+                          <div className="op-info">
+                            <span className="op-name">Mama</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -91,13 +102,19 @@ export const Expertise: React.FC = () => {
                   <div className="blueprint-grid"></div>
                   <div className="blueprint-shapes">
                     <div className="b-shape circle"></div>
-                    <div className="b-shape triangle"></div>
-                    <div className="b-badge-round">
-                      <div className="b-badge-text">BAUHAUS</div>
-                      <div className="b-badge-icons">
-                        <span>▶</span>
-                        <span>✦</span>
+                    <div className="b-shape grid-paper"></div>
+                    <div className="b-badge-round-hi">
+                      <div className="badge-header">
+                        <span className="shape red-tri"></span>
+                        <span className="shape green-circle"></span>
+                        <span className="shape orange-dots"></span>
                       </div>
+                      <div className="badge-user">
+                        <span className="avatar">👩‍🎨</span>
+                        <span className="username">Astrid S.</span>
+                      </div>
+                      <div className="badge-title">BAUHAUS</div>
+                      <div className="badge-action">Upload files</div>
                     </div>
                   </div>
                 </div>

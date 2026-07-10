@@ -139,7 +139,7 @@
   height: 70%;
   left: 5%;
   bottom: 0;
-  transform: translateY(160px) rotate(-4deg) scale(0.8);
+  transform: translateY(20px) rotate(-4deg) scale(0.3);
   z-index: 10;
   opacity: 0;
 }
@@ -149,7 +149,7 @@
   height: 85%;
   left: 25%;
   bottom: 0;
-  transform: translateY(160px) rotate(0deg) scale(0.8);
+  transform: translateY(20px) rotate(0deg) scale(0.3);
   z-index: 11;
   opacity: 0;
 }
@@ -159,7 +159,7 @@
   height: 75%;
   right: 5%;
   bottom: 0;
-  transform: translateY(160px) rotate(4deg) scale(0.8);
+  transform: translateY(20px) rotate(4deg) scale(0.3);
   z-index: 9;
   opacity: 0;
 }
@@ -201,190 +201,291 @@
 
 /* --- High-Fidelity Mockups Content Styling --- */
 
+/* --- High-Fidelity Mockups Content Styling --- */
+
 /* 1. Dashboard Mock */
 .dashboard-mock {
-  background-color: #f7f7f9;
+  background-color: #ffffff;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  font-family: var(--font-body);
 }
-.dashboard-mock .mock-header {
-  height: 8px;
-  background-color: #e5e5ea;
-  display: flex;
-  gap: 3px;
-  align-items: center;
-  padding-left: 6px;
-}
-.dashboard-mock .dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-}
-.dashboard-mock .dot.red { background-color: #ff3b30; }
-.dashboard-mock .dot.yellow { background-color: #ffcc00; }
-.dashboard-mock .dot.green { background-color: #34c759; }
 
-.dashboard-mock .mock-body {
-  display: flex;
-  flex: 1;
-  padding: 6px;
-}
-.dashboard-mock .dashboard-sidebar {
-  width: 14px;
-  border-right: 1px solid #e5e5ea;
+.dashboard-sidebar {
+  width: 32px;
+  background-color: #f6efe6;
+  border-right: 1px solid #e2d9cf;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding-right: 4px;
+  align-items: center;
+  padding: 6px 0;
+  gap: 8px;
 }
-.dashboard-mock .sidebar-item {
+
+.sidebar-logo {
+  font-size: 5px;
+  font-weight: 900;
+  color: #121212;
+  letter-spacing: -0.2px;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  padding: 0 4px;
+}
+
+.sidebar-menu .menu-item {
   height: 6px;
-  background-color: #e5e5ea;
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 1px;
 }
-.dashboard-mock .sidebar-item.active {
+
+.sidebar-menu .menu-item.active {
   background-color: var(--orange-accent);
 }
-.dashboard-mock .dashboard-content {
+
+.dashboard-main {
   flex: 1;
-  padding-left: 6px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
 }
-.dashboard-mock .content-title {
-  font-size: 8px;
-  font-weight: bold;
+
+.dashboard-header {
+  height: 14px;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.dashboard-header .search-bar {
+  width: 50%;
+  height: 6px;
+  background-color: #f1f1f1;
+  border-radius: 2px;
+}
+
+.dashboard-body {
+  flex: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #fafafa;
+}
+
+.performance-box {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.perf-title {
+  font-size: 7px;
+  font-weight: 800;
   color: #1c1c1e;
 }
-.dashboard-mock .content-chart {
-  height: 20px;
-  border-bottom: 1px solid #e5e5ea;
+
+.perf-subtitle {
+  font-size: 5px;
+  color: #a3a3a3;
+}
+
+.perf-chart {
+  height: 25px;
   display: flex;
   align-items: flex-end;
-  gap: 2px;
+  gap: 3px;
+  margin-top: 4px;
+  border-bottom: 1px solid #f1f1f1;
   padding-bottom: 2px;
 }
-.dashboard-mock .chart-bar {
+
+.perf-chart .bar {
   flex: 1;
-  background-color: #c7c7cc;
+  background-color: #e5e5ea;
   border-radius: 1px 1px 0 0;
+  transition: background-color 0.3s;
 }
-.dashboard-mock .chart-bar:hover, 
-.horizontal-folder-card:hover .dashboard-mock .chart-bar {
+
+.horizontal-folder-card:hover .perf-chart .bar {
   background-color: #121212;
 }
-.dashboard-mock .content-grid {
+
+.explore-box {
+  background-color: #fff9f0;
+  border: 1px solid #fcd5a5;
+  border-radius: 4px;
+  padding: 6px;
   display: flex;
-  gap: 4px;
+  justify-content: space-between;
+  align-items: center;
 }
-.dashboard-mock .grid-box {
-  flex: 1;
-  height: 12px;
-  background-color: #e5e5ea;
-  border-radius: 2px;
+
+.explore-title {
+  font-size: 6px;
+  font-weight: 700;
+  color: #c05621;
+}
+
+.explore-btn {
+  width: 10px;
+  height: 6px;
+  background-color: #ff5500;
+  border-radius: 1px;
 }
 
 /* 2. Phone Mock */
 .phone-mock {
-  background-color: #0b1a30;
-  border: 3px solid #1a1a1a;
-  border-radius: 12px;
+  background-color: #162649;
+  border: 3px solid #1c1c1e;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
+
 .phone-screen {
   width: 100%;
   height: 100%;
-  position: relative;
-  padding: 6px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  color: #fff;
+  padding: 6px;
+  color: #ffffff;
   font-family: var(--font-body);
 }
+
 .phone-island {
-  width: 24px;
+  width: 28px;
   height: 6px;
   background-color: #000;
   border-radius: 3px;
-  margin: 0 auto;
+  margin: 0 auto 4px auto;
 }
+
 .phone-header {
   display: flex;
   justify-content: space-between;
   font-size: 6px;
   opacity: 0.8;
   padding: 0 4px;
+  margin-bottom: 4px;
 }
-.phone-wallet-card {
-  background: linear-gradient(135deg, #1f3c75, #0f1c3f);
+
+.phone-scrollable-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.phone-cashback {
+  font-size: 6px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 2px 4px;
+  border-radius: 2px;
+  width: max-content;
+}
+
+.phone-balance {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin-top: 2px;
+}
+
+.phone-limits {
+  display: flex;
+  gap: 6px;
+  font-size: 5px;
+  opacity: 0.6;
+}
+
+.phone-card {
+  background: linear-gradient(135deg, #2b2b2b, #121212);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
   padding: 8px 6px;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.05);
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 34px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-.phone-wallet-card .wallet-card-chip {
+
+.phone-card .card-chip {
   width: 8px;
   height: 6px;
-  background-color: #d4af37;
+  background-color: #e5b25d;
   border-radius: 1px;
 }
-.phone-wallet-card .wallet-card-balance {
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: -0.2px;
-}
-.phone-wallet-card .wallet-card-number {
+
+.phone-card .card-logo {
   font-size: 5px;
-  opacity: 0.6;
-  font-family: var(--font-mono);
+  font-weight: bold;
+  opacity: 0.8;
 }
+
 .phone-actions {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 4px;
 }
+
 .phone-actions .action-circle {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: rgba(255,255,255,0.1);
-}
-.phone-transactions {
   flex: 1;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+.phone-operations {
   display: flex;
   flex-direction: column;
+  gap: 3px;
 }
-.phone-transactions .transaction-item {
+
+.ops-header {
+  font-size: 6px;
+  font-weight: bold;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.op-row {
   display: flex;
   align-items: center;
   gap: 4px;
-  background-color: rgba(255,255,255,0.05);
-  padding: 4px;
-  border-radius: 4px;
-}
-.phone-transactions .t-icon {
-  font-size: 8px;
-}
-.phone-transactions .t-info {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  font-size: 6px;
-}
-.phone-transactions .t-amount {
-  font-weight: bold;
-  color: #ff3b30;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 3px;
+  border-radius: 3px;
 }
 
-/* 3. Blueprint Mock */
+.op-avatar {
+  font-size: 7px;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.op-name {
+  font-size: 5px;
+}
+
+/* 3. Blueprint / Bauhaus Mock */
 .blueprint-mock {
-  background-color: #f7f4eb;
+  background-color: #f7f5f0;
   position: relative;
 }
+
 .blueprint-grid {
   position: absolute;
   inset: 0;
@@ -392,66 +493,110 @@
   background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
 }
-.blueprint-shapes {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.blueprint-shapes .b-shape {
-  position: absolute;
-  opacity: 0.2;
-}
+
 .blueprint-shapes .b-shape.circle {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  border: 1px dashed #121212;
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  position: absolute;
   top: 10px;
   left: 10px;
 }
-.blueprint-shapes .b-shape.triangle {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 35px solid rgba(0,0,0,0.15);
-  bottom: 20px;
+
+.blueprint-shapes .b-shape.grid-paper {
+  width: 40px;
+  height: 50px;
+  border: 1px solid rgba(0,0,0,0.05);
+  position: absolute;
+  top: 25px;
   right: 10px;
+  transform: rotate(5deg);
 }
-.b-badge-round {
+
+.b-badge-round-hi {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
+  width: 78px;
+  height: 78px;
   border-radius: 50%;
-  background-color: #fff;
-  border: 2px solid #ff5500;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border: 1px solid #ff5500;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  padding: 6px;
+  gap: 2px;
 }
-.b-badge-text {
+
+.b-badge-round-hi .badge-header {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.b-badge-round-hi .badge-header .shape {
+  width: 5px;
+  height: 5px;
+}
+
+.b-badge-round-hi .badge-header .shape.red-tri {
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 5px solid #ff3b30;
+}
+
+.b-badge-round-hi .badge-header .shape.green-circle {
+  background-color: #34c759;
+  border-radius: 50%;
+}
+
+.b-badge-round-hi .badge-header .shape.orange-dots {
+  background-color: #ff9500;
+  border-radius: 1px;
+}
+
+.badge-user {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background-color: #f1f1f1;
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+.badge-user .avatar {
+  font-size: 6px;
+}
+
+.badge-user .username {
+  font-size: 5px;
+  font-weight: 700;
+  color: #121212;
+}
+
+.b-badge-round-hi .badge-title {
   font-family: var(--font-body);
   font-weight: 900;
-  font-size: 7px;
+  font-size: 8px;
   color: #121212;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.3px;
+  margin: 1px 0;
 }
-.b-badge-icons {
-  display: flex;
-  gap: 2px;
-  font-size: 6px;
-  color: #ff5500;
-  margin-top: 2px;
+
+.b-badge-round-hi .badge-action {
+  font-size: 4px;
+  border: 1px solid #d1d1d6;
+  padding: 1px 4px;
+  border-radius: 3px;
+  color: #8e8e93;
+  background-color: #fafafa;
 }
 
 /* 4. Brand Guide Mock */

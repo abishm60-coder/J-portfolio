@@ -29,6 +29,7 @@
   grid-template-rows: auto auto;
   gap: 80px 60px; /* Increased row gap to give top/bottom annotations room */
   margin-top: 40px;
+  padding: 0 120px; /* Added side padding to prevent cut-off annotations */
 }
 
 .grid-cell {
@@ -69,7 +70,7 @@
   position: absolute;
   font-family: var(--font-handwriting);
   font-size: 1.5rem;
-  color: var(--orange-accent);
+  color: var(--handwriting-color);
   display: flex;
   z-index: 10;
   pointer-events: none;
@@ -82,110 +83,108 @@
 .annotation-arrow {
   width: 50px;
   height: auto;
+  flex-shrink: 0;
 }
 
 /* Positioning labels and arrows to point to the corners of the boxes */
 .label-letterforms {
-  left: -110px;
-  top: -20px;
-  flex-direction: column;
-  align-items: flex-end;
+  left: -180px;
+  top: -45px;
+  width: 180px;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 6px;
 }
 .label-letterforms .annotation-arrow {
-  width: 60px;
-  margin-top: 2px;
-  margin-right: -25px;
+  width: 50px;
+  margin-top: 8px;
 }
 
 .label-photography {
-  top: -75px;
-  left: 50%;
-  transform: translateX(-50%);
-  flex-direction: column;
-  align-items: center;
+  top: -82px;
+  left: 28%;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
 }
 .label-photography .annotation-arrow {
-  width: 32px;
-  margin-top: 2px;
+  width: 50px;
+  margin-top: 8px;
 }
 
 .label-journeys {
-  right: -55px;
-  top: -75px;
-  flex-direction: column;
+  right: -10px;
+  top: -82px;
+  flex-direction: row-reverse;
   align-items: flex-start;
+  gap: 8px;
 }
 .label-journeys .annotation-arrow {
-  width: 55px;
-  margin-top: 2px;
-  margin-left: -20px;
+  width: 50px;
+  margin-top: 8px;
 }
 
 .label-portraits {
-  left: -105px;
-  bottom: -35px;
-  flex-direction: column-reverse;
+  left: -180px;
+  bottom: -40px;
+  width: 180px;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: flex-end;
+  gap: 6px;
 }
 .label-portraits .annotation-arrow {
-  width: 60px;
-  margin-bottom: 2px;
-  margin-right: -20px;
+  width: 50px;
+  margin-bottom: 8px;
 }
 
 .label-curiosity {
-  bottom: -80px;
-  left: 50%;
+  bottom: -84px;
+  left: 53%;
   transform: translateX(-50%);
-  flex-direction: column-reverse;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 8px;
 }
 .label-curiosity .annotation-arrow {
-  width: 32px;
-  margin-bottom: 2px;
+  width: 50px;
+  margin-bottom: 8px;
 }
 
 .label-nature {
-  right: -95px;
-  bottom: -20px;
-  flex-direction: column;
+  right: -180px;
+  bottom: 45px;
+  width: 180px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   align-items: flex-start;
+  gap: 8px;
 }
 .label-nature .annotation-arrow {
-  width: 55px;
-  margin-top: 2px;
-  margin-left: -20px;
+  width: 50px;
+  margin-top: 8px;
 }
 
 /* Responsive grid adjustments */
 @media (max-width: 1200px) {
   .playground-section {
-    padding: 100px 80px;
+    padding: 100px 60px;
   }
   .playground-2x3-wrapper {
     gap: 80px 40px;
+    padding: 0 100px;
   }
 }
 
 @media (max-width: 992px) {
   .playground-section {
-    padding: 80px 60px;
+    padding: 80px 40px;
   }
   .playground-2x3-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 90px 40px;
-  }
-  .label-letterforms {
-    left: -50px;
-    top: -55px;
-  }
-  .label-portraits {
-    left: -50px;
-    bottom: -65px;
-  }
-  .label-nature {
-    right: -50px;
-    bottom: -65px;
+    padding: 0 90px;
   }
 }
 

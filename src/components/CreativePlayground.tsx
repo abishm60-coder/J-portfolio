@@ -24,8 +24,8 @@ export const CreativePlayground: React.FC = () => {
             <div className="custom-annotation-container label-letterforms">
               <span className="annotation-text">letterforms</span>
               <svg className="annotation-arrow" viewBox="0 0 60 40">
-                <path d="M 10,10 Q 35,10 45,30" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M 38,26 L 45,30 L 48,22" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 10,10 Q 35,10 45,30" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 38,26 L 45,30 L 48,22" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <div className="cell-visual-container">
@@ -37,9 +37,9 @@ export const CreativePlayground: React.FC = () => {
           <div className="grid-cell item-photography">
             <div className="custom-annotation-container label-photography">
               <span className="annotation-text">photography</span>
-              <svg className="annotation-arrow" viewBox="0 0 40 50">
-                <path d="M 20,5 Q 35,25 20,42" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M 14,35 L 20,42 L 26,36" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <svg className="annotation-arrow" viewBox="0 0 60 50">
+                <path d="M 10,5 Q 45,10 40,40" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 46,33 L 40,40 L 33,34" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <div className="cell-visual-container">
@@ -52,8 +52,8 @@ export const CreativePlayground: React.FC = () => {
             <div className="custom-annotation-container label-journeys">
               <span className="annotation-text">journeys</span>
               <svg className="annotation-arrow" viewBox="0 0 60 50">
-                <path d="M 50,5 Q 15,10 20,40" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M 14,33 L 20,40 L 27,34" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 50,5 Q 15,10 20,40" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 14,33 L 20,40 L 27,34" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <div className="cell-visual-container">
@@ -66,8 +66,8 @@ export const CreativePlayground: React.FC = () => {
             <div className="custom-annotation-container label-portraits">
               <span className="annotation-text">portraits</span>
               <svg className="annotation-arrow" viewBox="0 0 60 50">
-                <path d="M 10,40 Q 45,40 50,15" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M 44,22 L 50,15 L 54,23" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 10,40 Q 45,40 50,15" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 44,22 L 50,15 L 54,23" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <div className="cell-visual-container">
@@ -78,9 +78,9 @@ export const CreativePlayground: React.FC = () => {
           {/* Card 5: curiosity */}
           <div className="grid-cell item-curiosity">
             <div className="custom-annotation-container label-curiosity">
-              <svg className="annotation-arrow" viewBox="0 0 40 50">
-                <path d="M 20,45 Q 5,25 20,8" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M 14,14 L 20,8 L 26,15" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <svg className="annotation-arrow" viewBox="0 0 60 50">
+                <path d="M 50,40 Q 15,40 10,15" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 16,22 L 10,15 L 6,23" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <span className="annotation-text">curiosity</span>
             </div>
@@ -94,8 +94,8 @@ export const CreativePlayground: React.FC = () => {
             <div className="custom-annotation-container label-nature">
               <span className="annotation-text">nature</span>
               <svg className="annotation-arrow" viewBox="0 0 60 40">
-                <path d="M 50,10 Q 20,10 15,30" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M 22,24 L 15,30 L 12,22" fill="none" stroke="var(--orange-accent)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 50,10 Q 20,10 15,30" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 22,24 L 15,30 L 12,22" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <div className="cell-visual-container">

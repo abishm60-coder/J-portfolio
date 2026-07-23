@@ -102,8 +102,9 @@ export const JourneyDetail: React.FC<JourneyDetailProps> = ({ onBack }) => {
         {/* Header Branding elements matching the mockup top row */}
         <div className="journey-detail-top-row">
           <div className="journey-logo-text-group">
-            <h1 className="journey-brand-name">JERFIN JEROLD</h1>
-            <p className="journey-brand-subtext">designing products that people love to use.</p>
+            <p className="journey-intro-heading">
+              i help startups, founders, and agencies move fast without sacrificing quality through premium design, reliable development, and clean systems.
+            </p>
           </div>
           
           <div className="journey-sticker-wrapper">

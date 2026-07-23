@@ -18,19 +18,14 @@
   margin-bottom: 32px;
 }
 
-.journey-brand-name {
-  font-family: var(--font-heading); /* Bebas Neue */
-  font-size: 3rem;
-  letter-spacing: 1px;
-  line-height: 1;
+.journey-intro-heading {
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+  font-weight: 300;
+  line-height: 1.4;
   color: var(--text-primary);
-}
-
-.journey-brand-subtext {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  margin-top: 6px;
+  max-width: 620px;
+  letter-spacing: -0.3px;
 }
 
 .journey-sticker-wrapper {
@@ -144,9 +139,6 @@
   .journey-hero-image-wrapper {
     aspect-ratio: 16 / 9;
   }
-  .journey-brand-name {
-    font-size: 2.5rem;
-  }
   .philosophy-statement {
     font-size: 1.6rem;
   }
@@ -168,9 +160,6 @@
 }
 
 @media (max-width: 576px) {
-  .journey-brand-name {
-    font-size: 2rem;
-  }
   .journey-hero-image-wrapper {
     aspect-ratio: 4 / 3;
   }

@@ -9,6 +9,8 @@ import { ContactFooter } from './components/ContactFooter';
 import { ProjectDetail } from './components/ProjectDetail';
 import { JourneyDetail } from './components/JourneyDetail';
 import { PlaygroundDetail } from './components/PlaygroundDetail';
+import { WorkFresco } from './components/WorkFresco';
+import { WorkProject2 } from './components/WorkProject2';
 
 type Route = 
   | { type: 'home' }
@@ -97,7 +99,13 @@ const App: React.FC = () => {
       <Header onNavigate={handleNavigation} />
       <main style={{ minHeight: '80vh' }}>
         {route.type === 'project' && (
-          <ProjectDetail projectId={route.id} onBack={goBack} />
+          route.id === 'proj-1' ? (
+            <WorkFresco onBack={goBack} />
+          ) : route.id === 'proj-2' ? (
+            <WorkProject2 onBack={goBack} />
+          ) : (
+            <ProjectDetail projectId={route.id} onBack={goBack} />
+          )
         )}
         
         {route.type === 'work' && (

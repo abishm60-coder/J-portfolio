@@ -12,6 +12,7 @@ import curiosityImg from '../assets/curiosity.png';
 import brandImg from '../assets/brand.png';
 import campaignImg from '../assets/campaign.png';
 import interfaceImg from '../assets/interface.png';
+import journeysCaseImg from '../assets/journeys_case.png';
 
 export interface ProjectDetailData {
   id: string;
@@ -247,6 +248,19 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onBack 
               <h3>THE OUTCOME</h3>
               <p>{project.outcome}</p>
             </section>
+
+            {projectId === 'proj-2' && (
+              <section className="content-block case-showcase-block" style={{ marginTop: '20px' }}>
+                <h3>VISUAL SHOWCASE</h3>
+                <div style={{ width: '100%', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border-grey)' }}>
+                  <img 
+                    src={journeysCaseImg} 
+                    alt="Journeys Scenery Webpage Showcase" 
+                    style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} 
+                  />
+                </div>
+              </section>
+            )}
           </div>
         </div>
 

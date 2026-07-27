@@ -1,0 +1,232 @@
+.work-fresco-container {
+  width: 100%;
+  background-color: #000000;
+  padding: 0 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fresco-hero-fullwidth {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.fresco-hero-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.work-fresco-content {
+  width: 100%;
+  max-width: 1050px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.fresco-nav-bar {
+  padding: 16px 0 0 0;
+}
+
+.fresco-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.fresco-back-btn:hover {
+  color: #ff5500;
+  transform: translateX(-4px);
+}
+
+.fresco-section-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.fresco-case-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Native HTML Overview Card for 100% Crisp Vector Typography */
+.fresco-overview-html-card {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: var(--font-body, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.fresco-card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.fresco-main-title {
+  font-family: var(--font-heading, "Impact", sans-serif);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+}
+
+.fresco-tagline {
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  max-width: 480px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.fresco-meta-group {
+  display: flex;
+  gap: 36px;
+}
+
+.fresco-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fresco-meta-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.fresco-meta-value {
+  font-size: 0.85rem;
+  color: #a0a0a0;
+}
+
+.fresco-card-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #222222;
+  margin: 20px 0 40px 0;
+}
+
+.fresco-card-section-row {
+  display: flex;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
+.fresco-section-left {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.fresco-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.fresco-section-right {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fresco-body-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin: 0;
+  max-width: 680px;
+}
+
+.fresco-executed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fresco-executed-list li {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.fresco-executed-list li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .work-fresco-container {
+    padding: 0 0 40px 0;
+  }
+  
+  .work-fresco-content {
+    gap: 32px;
+    padding: 0 12px;
+  }
+
+  .fresco-nav-bar {
+    padding: 12px 0 0 0;
+  }
+
+  .fresco-card-header-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .fresco-card-section-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .fresco-section-left {
+    width: 100%;
+  }
+}

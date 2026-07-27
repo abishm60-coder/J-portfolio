@@ -129,19 +129,54 @@ export const JourneyDetail: React.FC<JourneyDetailProps> = ({ onBack }) => {
           />
         </div>
 
-        {/* Small intro paragraph aligned to the right below the visual */}
-        <div className="journey-intro-paragraph-row">
-          <p className="journey-intro-text">
-            creative product designer working across startups, freelance projects, and personal ventures. i combine research, strategy, branding, and ui/ux to design products that are intuitive, scalable, and built for real users.
-          </p>
+        {/* What I Can Do Section */}
+        <div className="journey-services-section">
+          <h3 className="journey-services-title">
+            what i <span className="highlight-orange">can do?</span>
+          </h3>
+
+          <div className="journey-services-grid">
+            <div className="service-column">
+              <h4 className="service-column-heading">design</h4>
+              <ul className="service-list">
+                <li>website design</li>
+                <li>product design</li>
+                <li>design systems</li>
+                <li>visual direction</li>
+              </ul>
+            </div>
+
+            <div className="service-column">
+              <h4 className="service-column-heading">development</h4>
+              <ul className="service-list">
+                <li>webflow development</li>
+                <li>framer development</li>
+                <li>shopify</li>
+                <li>wordpress</li>
+              </ul>
+            </div>
+
+            <div className="service-column">
+              <h4 className="service-column-heading">branding</h4>
+              <ul className="service-list">
+                <li>copywriting</li>
+                <li>visual identity</li>
+                <li>brand direction</li>
+                <li>moodboards</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        {/* Horizontal Divider Line */}
+        <div className="journey-divider"></div>
 
         {/* Core philosophy text stack with character-by-character scroll reveal */}
         <div className="journey-philosophy-content">
           <div className="philosophy-item">
             <ScrollRevealText 
               text="design is where curiosity meets purpose. "
-              icon={<span className="philosophy-icon">✦</span>}
+              icon={<span className="philosophy-icon">✨</span>}
               className="philosophy-statement"
             />
           </div>
@@ -149,15 +184,14 @@ export const JourneyDetail: React.FC<JourneyDetailProps> = ({ onBack }) => {
           <div className="philosophy-item">
             <ScrollRevealText 
               text="it's not just about creating beautiful interfaces, it's about solving problems that matter. "
-              icon={<span className="philosophy-icon-box">▢</span>}
+              icon={<span className="philosophy-icon">🤪</span>}
               className="philosophy-statement"
             />
           </div>
 
           <div className="philosophy-item">
             <ScrollRevealText 
-              text="every project begins with understanding people, exploring ideas, and designing experiences that feel intuitive and meaningful. "
-              icon={<span className="philosophy-icon-box">◎</span>}
+              text="every project begins with understanding people, exploring ideas 🔍, and designing experiences that feel intuitive and meaningful. "
               className="philosophy-statement"
             />
           </div>
@@ -165,7 +199,7 @@ export const JourneyDetail: React.FC<JourneyDetailProps> = ({ onBack }) => {
           <div className="philosophy-item">
             <ScrollRevealText 
               text="i'm constantly learning, refining my craft, and turning every challenge into an opportunity to create better products. "
-              icon={<span className="philosophy-icon-arrow">↗</span>}
+              icon={<span className="philosophy-icon">☑️</span>}
               className="philosophy-statement"
             />
           </div>

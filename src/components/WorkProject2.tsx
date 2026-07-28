@@ -442,9 +442,10 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
               </div>
             </div>
           </div>
-        </div>
+      </div>
 
-        <div className="project2-section-divider" />
+      <div style={{ width: '100%', maxWidth: '1300px', padding: '0 40px', margin: '0 auto', boxSizing: 'border-box' }}>
+        <div className="project2-section-divider" style={{ margin: '50px 0 30px 0' }} />
 
         {/* SECTION 17: More Projects */}
         <div className="project2-html-section" style={{ paddingBottom: '60px' }}>

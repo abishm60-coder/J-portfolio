@@ -117,18 +117,97 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
           </div>
         </div>
 
-        {/* Case Study Section Wrappers */}
-        <div className="project2-section-wrapper">
-          <img src={sec1} alt="Problem Statement & Choosing the Right Expert" className="project2-case-image" />
+        <div className="project2-section-divider" />
+
+        {/* SECTION 3: Problem Statement */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">Problem Statement</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">what needed to change</h4>
+              <div className="project2-sub-desc">
+                <p style={{ margin: '0 0 16px 0' }}>
+                  businesses often need specialized expertise to solve challenges outside their internal capabilities. but finding the right expert, evaluating their approach before committing, and managing the actual solution process can be fragmented and uncertain.
+                </p>
+                <p style={{ margin: 0 }}>
+                  the challenge was to create a trusted marketplace where businesses could evaluate expertise before paying for deeper collaboration and then manage the entire solution journey in one place.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="project2-section-wrapper">
-          <img src={sec2} alt="Moving from Advice to Action" className="project2-case-image" />
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 4: How I Solved It - 01 Choosing the Right Expert */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">How I Solved It</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">01 choosing the right expert</h4>
+              <div className="project2-sub-desc">
+                <p style={{ margin: '0 0 16px 0' }}>
+                  a profile alone isn't enough to know whether an expert understands a specific business problem.
+                </p>
+                <p style={{ margin: 0 }}>
+                  businesses needed a way to evaluate multiple expert approaches before making a commitment.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="project2-section-wrapper">
-          <img src={sec3} alt="Building Trust & Collaboration" className="project2-case-image" />
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 5: How I Solved It - 02 Moving from Advice to Action */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">02 moving from advice to action</h4>
+              <p className="project2-sub-desc">
+                receiving expert advice wasn't enough. businesses needed a clear path for turning a selected solution into actionable tasks and measurable progress.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="project2-section-wrapper">
-          <img src={sec4} alt="Research & Discovery" className="project2-case-image" />
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 6: How I Solved It - 03 Building Trust & Collaboration */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">03 building trust & collaboration</h4>
+              <div className="project2-sub-desc">
+                <p style={{ margin: '0 0 16px 0' }}>
+                  businesses needed confidence in the experts they selected, while the platform needed to keep collaboration secure and within its ecosystem.
+                </p>
+                <p style={{ margin: 0 }}>
+                  ratings, reviews, structured communication, and admin-moderated messaging became important trust mechanisms.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 7: Research */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">Research</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">what i discovered</h4>
+              <div className="project2-sub-desc">
+                <p style={{ margin: '0 0 16px 0' }}>
+                  i studied how expert marketplaces and consulting platforms handle expert discovery, credibility, solution evaluation, payments, and collaboration.
+                </p>
+                <p style={{ margin: 0 }}>
+                  the research helped identify a key gap: finding an expert wasn't the biggest problem—knowing whether their approach was worth committing to was.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

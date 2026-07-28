@@ -294,8 +294,6 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
         </div>
       </div>
       <div style={{ width: '100%', maxWidth: '1300px', padding: '0 40px', margin: '0 auto', boxSizing: 'border-box' }}>
-        <div className="fresco-section-divider" style={{ margin: '50px 0 30px 0' }} />
-
         {/* SECTION 12: More Projects */}
         <div className="fresco-html-section" style={{ paddingBottom: '60px' }}>
           <div className="fresco-image-container">

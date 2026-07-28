@@ -330,6 +330,26 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
             <img src={project2SolutionUnlocking} alt="Before/After Solution Unlocking Interface" className="project2-case-image" />
           </div>
         </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 12: Task Execution */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">Task Execution</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">from solution to action</h4>
+              <div className="project2-sub-desc">
+                <p style={{ margin: '0 0 16px 0' }}>
+                  experts can break the solution into actionable tasks with priorities, deadlines, supporting files, and progress states.
+                </p>
+                <p style={{ margin: 0 }}>
+                  both sides can discuss individual tasks, share updates, and track completion—turning expert knowledge into a guided execution process rather than a static recommendation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

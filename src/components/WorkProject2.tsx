@@ -136,6 +136,7 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
         <div className="project2-html-section">
           <div className="project2-section-header">
             <h2 className="project2-section-heading">Problem Statement</h2>
+            
             <div className="project2-sub-header">
               <h4 className="project2-sub-title">what needed to change</h4>
               <div className="project2-sub-desc">
@@ -147,9 +148,7 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
                 </p>
               </div>
             </div>
-          </div>
-          
-          <div className="project2-section-header" style={{ marginTop: '24px' }}>
+
             <div className="project2-sub-header">
               <h4 className="project2-sub-title">01 choosing the right expert</h4>
               <div className="project2-sub-desc">
@@ -162,7 +161,8 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
               </div>
             </div>
           </div>
-          <div className="project2-image-container">
+          
+          <div className="project2-image-container" style={{ marginTop: '20px' }}>
             <img src={project2ChooseExpert} alt="Choosing the Right Expert Interface" className="project2-case-image" />
           </div>
         </div>
@@ -442,6 +442,7 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
               </div>
             </div>
           </div>
+        </div>
       </div>
 
       <div style={{ width: '100%', maxWidth: '1300px', padding: '0 40px', margin: '0 auto', boxSizing: 'border-box' }}>

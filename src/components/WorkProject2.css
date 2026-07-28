@@ -31,7 +31,7 @@
 
 .work-project2-content {
   width: 100%;
-  max-width: 1050px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -176,10 +176,15 @@
 
 .project2-body-text {
   font-size: 0.92rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #b0b0b0;
-  margin: 0;
-  max-width: 680px;
+  margin: 0 0 24px 0;
+  max-width: 880px;
+  letter-spacing: 0;
+  text-align: left;
+}
+.project2-body-text:last-child {
+  margin-bottom: 0;
 }
 
 .project2-executed-list {
@@ -245,8 +250,8 @@
 .project2-section-header {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 48px;
+  margin-bottom: 24px;
 }
 
 .project2-section-heading {
@@ -255,14 +260,15 @@
   font-weight: 700;
   color: #ffffff;
   margin: 0;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.02em;
+  text-align: left;
 }
 
 .project2-sub-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 100px;
 }
 
 .project2-sub-title {
@@ -272,15 +278,26 @@
   margin: 0;
   width: 220px;
   flex-shrink: 0;
+  letter-spacing: 0.02em;
+  text-align: left;
 }
 
 .project2-sub-desc {
   font-size: 0.92rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #b0b0b0;
   margin: 0;
   flex-grow: 1;
-  max-width: 680px;
+  max-width: 880px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.project2-sub-desc p {
+  margin-bottom: 24px;
+}
+.project2-sub-desc p:last-child {
+  margin-bottom: 0;
 }
 
 .project2-section-divider {

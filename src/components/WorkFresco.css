@@ -31,7 +31,7 @@
 
 .work-fresco-content {
   width: 100%;
-  max-width: 1050px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -112,7 +112,8 @@
   font-weight: 700;
   color: #ffffff;
   margin: 0;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.02em;
+  text-align: left;
 }
 
 .fresco-sub-header {
@@ -129,15 +130,26 @@
   margin: 0;
   width: 220px;
   flex-shrink: 0;
+  letter-spacing: 0.02em;
+  text-align: left;
 }
 
 .fresco-sub-desc {
   font-size: 0.92rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #b0b0b0;
   margin: 0;
   flex-grow: 1;
   max-width: 680px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.fresco-sub-desc p {
+  margin-bottom: 24px;
+}
+.fresco-sub-desc p:last-child {
+  margin-bottom: 0;
 }
 
 /* Solution Section Header Style (01, 02, 03) */
@@ -289,10 +301,15 @@
 
 .fresco-body-text {
   font-size: 0.92rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #b0b0b0;
-  margin: 0;
-  max-width: 680px;
+  margin: 0 0 24px 0;
+  max-width: 880px;
+  letter-spacing: 0;
+  text-align: left;
+}
+.fresco-body-text:last-child {
+  margin-bottom: 0;
 }
 
 .fresco-executed-list {

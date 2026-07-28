@@ -13,6 +13,7 @@ import project2SolutionUnlocking from '../assets/project2_solution_unlocking.png
 import project2TaskExecution from '../assets/project2_task_execution.png';
 import project2TrustLoop from '../assets/project2_trust_loop.png';
 import project2DesignSystem from '../assets/project2_design_system.png';
+import project2Outcome from '../assets/project2_outcome.png';
 import sec1 from '../assets/project2_sec1.png';
 import sec2 from '../assets/project2_sec2.png';
 import sec3 from '../assets/project2_sec3.png';
@@ -410,6 +411,9 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="project2-image-container">
+            <img src={project2Outcome} alt="Final Polished Product Montage Collage" className="project2-case-image" />
           </div>
         </div>
       </div>

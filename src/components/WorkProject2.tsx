@@ -282,6 +282,26 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
             <img src={project2ChallengeSubmission} alt="Challenge Details & Submission Interface" className="project2-case-image" />
           </div>
         </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 10: The Core Feature - Expert Teasers */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">The Core Feature</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">expert teasers</h4>
+              <div className="project2-sub-desc">
+                <p style={{ margin: '0 0 16px 0' }}>
+                  instead of immediately purchasing a complete solution, businesses receive short teasers from multiple experts explaining how they would approach the challenge.
+                </p>
+                <p style={{ margin: 0 }}>
+                  this creates a low-risk evaluation stage where users can compare approaches, ratings, and expertise before choosing whom to work with.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

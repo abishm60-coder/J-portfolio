@@ -263,6 +263,21 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
             <img src={project2DesignProcess} alt="Design Process (Client & Expert Journeys)" className="project2-case-image" />
           </div>
         </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 9: How I Solved It - Challenge Submission */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">How I Solved It</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">challenge submission</h4>
+              <p className="project2-sub-desc">
+                businesses can structure their challenge around the problem, objectives, scope, constraints, budget, and supporting documents—giving experts enough context to understand the problem before responding.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

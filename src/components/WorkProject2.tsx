@@ -11,6 +11,7 @@ import project2ChallengeSubmission from '../assets/project2_challenge_submission
 import project2ExpertTeasers from '../assets/project2_expert_teasers.png';
 import project2SolutionUnlocking from '../assets/project2_solution_unlocking.png';
 import project2TaskExecution from '../assets/project2_task_execution.png';
+import project2TrustLoop from '../assets/project2_trust_loop.png';
 import sec1 from '../assets/project2_sec1.png';
 import sec2 from '../assets/project2_sec2.png';
 import sec3 from '../assets/project2_sec3.png';
@@ -367,6 +368,9 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
                 after completing a collaboration, businesses can rate and review the expert. these ratings appear alongside future teaser submissions, helping other businesses evaluate experts with greater confidence.
               </p>
             </div>
+          </div>
+          <div className="project2-image-container">
+            <img src={project2TrustLoop} alt="Trust Loop Ratings & Feedback Interface" className="project2-case-image" />
           </div>
         </div>
       </div>

@@ -253,15 +253,11 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
             <img src={frescoFinalDesign} alt="Final Design System & Component Handoff" className="fresco-case-image" />
           </div>
         </div>
-
-        <div className="fresco-section-divider" />
-
         {/* SECTION 10: Responsive Across All Devices */}
         <div className="fresco-html-section">
           <div className="fresco-section-header">
-            <h2 className="fresco-section-heading">Responsive Across All Devices</h2>
             <div className="fresco-sub-header">
-              <h4 className="fresco-sub-title">optimized for every screen</h4>
+              <h4 className="fresco-sub-title">responsive across all devices</h4>
               <p className="fresco-sub-desc">
                 the platform was designed to work seamlessly across desktop and mobile. all key flows including postal code validation, plan selection, and booking were carefully optimized for each screen size.
               </p>
@@ -297,15 +293,11 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
           </div>
         </div>
       </div>
-
       <div style={{ width: '100%', maxWidth: '1300px', padding: '0 40px', margin: '0 auto', boxSizing: 'border-box' }}>
         <div className="fresco-section-divider" style={{ margin: '50px 0 30px 0' }} />
 
         {/* SECTION 12: More Projects */}
         <div className="fresco-html-section" style={{ paddingBottom: '60px' }}>
-          <div className="fresco-section-header">
-            <h2 className="fresco-section-heading">More Projects</h2>
-          </div>
           <div className="fresco-image-container">
             <img src={fresco12} alt="Explore More Projects" className="fresco-case-image" />
           </div>

@@ -392,6 +392,26 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
             <img src={project2DesignSystem} alt="Design System & UI Components Style Guide" className="project2-case-image" />
           </div>
         </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 15: Outcome */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">Outcome</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">discovery to structured execution.</h4>
+              <div className="project2-sub-desc">
+                <p style={{ margin: '0 0 16px 0' }}>
+                  the final experience transformed a complex consulting workflow into a structured marketplace journey where businesses can <strong>post challenges, evaluate expert thinking, unlock solutions, collaborate through tasks, and track progress within one ecosystem.</strong>
+                </p>
+                <p style={{ margin: 0 }}>
+                  for experts, the platform creates a clear path to discover relevant challenges, demonstrate expertise, build reputation, collaborate with clients, and earn rewards.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

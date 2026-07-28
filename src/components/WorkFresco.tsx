@@ -274,21 +274,22 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
         <div className="fresco-html-section">
           <div className="fresco-section-header">
             <h2 className="fresco-section-heading">Reflection</h2>
-            <h4 className="fresco-sub-title">what did i learn?</h4>
-          </div>
-
-          <div className="fresco-reflection-grid">
-            <div className="fresco-reflection-card">
-              <h5 className="fresco-reflection-card-title">balancing business goals with user needs</h5>
-              <p className="fresco-body-text">
-                every design decision focused on reducing friction while supporting the company's business objectives. rather than redesigning the interface alone, the goal was to create a booking experience that felt simple, trustworthy, and encouraged more users to complete their orders.
-              </p>
-            </div>
-            <div className="fresco-reflection-card">
-              <h5 className="fresco-reflection-card-title">trust is the foundation of service experiences</h5>
-              <p className="fresco-body-text">
-                laundry services require customers to hand over their personal belongings, making trust a critical part of the experience. by using authentic imagery, transparent pricing, customer reviews, and a clear service journey, the platform built confidence before users even started the booking process.
-              </p>
+            <div className="fresco-sub-header">
+              <h4 className="fresco-sub-title">what did i learn?</h4>
+              <div className="fresco-sub-desc">
+                <div style={{ marginBottom: '24px' }}>
+                  <h5 style={{ margin: '0 0 8px 0', fontSize: '1rem', fontWeight: 600, color: '#ffffff' }}>balancing business goals with user needs</h5>
+                  <p style={{ margin: 0 }}>
+                    every design decision focused on reducing friction while supporting the company's business objectives. rather than redesigning the interface alone, the goal was to create a booking experience that felt simple, trustworthy, and encouraged more users to complete their orders.
+                  </p>
+                </div>
+                <div>
+                  <h5 style={{ margin: '0 0 8px 0', fontSize: '1rem', fontWeight: 600, color: '#ffffff' }}>trust is the foundation of service experiences</h5>
+                  <p style={{ margin: 0 }}>
+                    laundry services require customers to hand over their personal belongings, making trust a critical part of the experience. by using authentic imagery, transparent pricing, customer reviews, and a clear service journey, the platform built confidence before users even started the booking process.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

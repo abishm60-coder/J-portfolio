@@ -160,7 +160,6 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
         {/* SECTION 4: How I Solved It - 02 Moving from Advice to Action */}
         <div className="project2-html-section">
           <div className="project2-section-header">
-            <h2 className="project2-section-heading">How I Solved It</h2>
             <div className="project2-sub-header">
               <h4 className="project2-sub-title">02 moving from advice to action</h4>
               <p className="project2-sub-desc">

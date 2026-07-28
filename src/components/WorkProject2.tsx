@@ -416,6 +416,32 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
             <img src={project2Outcome} alt="Final Polished Product Montage Collage" className="project2-case-image" />
           </div>
         </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 16: Reflection */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">Reflection</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">what did i learn?</h4>
+              <div className="project2-sub-desc">
+                <div style={{ marginBottom: '24px' }}>
+                  <h5 style={{ margin: '0 0 8px 0', fontSize: '1rem', fontWeight: 600, color: '#ffffff' }}>designing two sides as one system</h5>
+                  <p style={{ margin: 0 }}>
+                    designing for businesses and experts taught me that marketplace ux isn't two separate experiences. every action on one side creates a state, expectation, or response on the other. mapping those dependencies early helped simplify the overall workflow.
+                  </p>
+                </div>
+                <div>
+                  <h5 style={{ margin: '0 0 8px 0', fontSize: '1rem', fontWeight: 600, color: '#ffffff' }}>trust needs to appear at the decision point</h5>
+                  <p style={{ margin: 0 }}>
+                    expert ratings, reviews, teasers, and experience matter most when users are deciding whether to commit. designing these signals directly into the selection journey made trust part of the experience rather than just profile information.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

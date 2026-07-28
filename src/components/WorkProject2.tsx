@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import './WorkProject2.css';
 import project2Hero from '../assets/project2_hero.png';
 import project2ChooseExpert from '../assets/project2_choose_expert.png';
+import project2AdviceToAction from '../assets/project2_advice_to_action.png';
 import sec1 from '../assets/project2_sec1.png';
 import sec2 from '../assets/project2_sec2.png';
 import sec3 from '../assets/project2_sec3.png';
@@ -166,6 +167,9 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
                 receiving expert advice wasn't enough. businesses needed a clear path for turning a selected solution into actionable tasks and measurable progress.
               </p>
             </div>
+          </div>
+          <div className="project2-image-container">
+            <img src={project2AdviceToAction} alt="Moving from Advice to Action Interface" className="project2-case-image" />
           </div>
         </div>
 

@@ -5,6 +5,7 @@ import project2Hero from '../assets/project2_hero.png';
 import project2ChooseExpert from '../assets/project2_choose_expert.png';
 import project2AdviceToAction from '../assets/project2_advice_to_action.png';
 import project2TrustCollaboration from '../assets/project2_trust_collaboration.png';
+import project2Research from '../assets/project2_research.png';
 import sec1 from '../assets/project2_sec1.png';
 import sec2 from '../assets/project2_sec2.png';
 import sec3 from '../assets/project2_sec3.png';
@@ -213,6 +214,9 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="project2-image-container">
+            <img src={project2Research} alt="Research & Insights" className="project2-case-image" />
           </div>
         </div>
       </div>

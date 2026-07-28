@@ -4,8 +4,16 @@ import './WorkFresco.css';
 
 // Import the Fresco Laundry case study visual assets
 import fresco1 from '../assets/fresco_1.png';
+import fresco2 from '../assets/fresco_2.png';
 import fresco3 from '../assets/fresco_3.png';
 import fresco4 from '../assets/fresco_4.png';
+import frescoResearchMethods from '../assets/fresco_research_methods.png';
+import frescoDesignProcess from '../assets/fresco_design_process.png';
+import frescoServiceDiscovery from '../assets/fresco_service_discovery.png';
+import frescoGuidedBooking from '../assets/fresco_guided_booking.png';
+import frescoBuildingTrust from '../assets/fresco_building_trust.png';
+import frescoFinalDesign from '../assets/fresco_final_design.png';
+import frescoResponsive from '../assets/fresco_responsive.png';
 import fresco5 from '../assets/fresco_5.png';
 import fresco6 from '../assets/fresco_6.png';
 import fresco7 from '../assets/fresco_7.png';
@@ -135,8 +143,8 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
               </p>
             </div>
           </div>
-          <div className="fresco-image-container">
-            <img src={fresco3} alt="Problem Statement - Customer & Business Challenges" className="fresco-case-image" />
+          <div className="fresco-image-container" style={{ marginTop: '20px' }}>
+            <img src={fresco2} alt="Problem Statement - Customer & Business Challenges" className="fresco-case-image" />
           </div>
         </div>
 
@@ -154,7 +162,7 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
             </div>
           </div>
           <div className="fresco-image-container">
-            <img src={fresco4} alt="Research - Methods & Insights" className="fresco-case-image" />
+            <img src={frescoResearchMethods} alt="Research Methods & Findings" className="fresco-case-image" />
           </div>
         </div>
 
@@ -172,7 +180,7 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
             </div>
           </div>
           <div className="fresco-image-container">
-            <img src={fresco5} alt="Design Process Timeline" className="fresco-case-image" />
+            <img src={frescoDesignProcess} alt="Design Process Timeline" className="fresco-case-image" />
           </div>
         </div>
 
@@ -180,17 +188,17 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
 
         {/* SECTION 6: How I Solved It - 01 Simplified Service Discovery */}
         <div className="fresco-html-section">
-          <div className="fresco-solution-header">
-            <span className="fresco-solution-num">01</span>
-            <div className="fresco-solution-title-wrap">
-              <h3 className="fresco-solution-title">simplified service discovery</h3>
-              <p className="fresco-solution-desc">
-                users often hesitated to start booking because service availability and pricing were unclear. by placing postal code validation directly on the hero section, users can immediately verify coverage before exploring services.
+          <div className="fresco-section-header">
+            <h2 className="fresco-section-heading">How I Solved It</h2>
+            <div className="fresco-sub-header">
+              <h4 className="fresco-sub-title">01 simplified service discovery</h4>
+              <p className="fresco-sub-desc">
+                the booking experience begins with postal code validation, allowing users to instantly verify whether the service is available in their location. if unavailable, users can join a notification list and receive updates when the service expands to their area.
               </p>
             </div>
           </div>
           <div className="fresco-image-container">
-            <img src={fresco6} alt="Simplified Service Discovery Interface" className="fresco-case-image" />
+            <img src={frescoServiceDiscovery} alt="Simplified Service Discovery Interface" className="fresco-case-image" />
           </div>
         </div>
 
@@ -198,17 +206,16 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
 
         {/* SECTION 7: How I Solved It - 02 Guided Booking Experience */}
         <div className="fresco-html-section">
-          <div className="fresco-solution-header">
-            <span className="fresco-solution-num">02</span>
-            <div className="fresco-solution-title-wrap">
-              <h3 className="fresco-solution-title">guided booking experience</h3>
-              <p className="fresco-solution-desc">
+          <div className="fresco-section-header">
+            <div className="fresco-sub-header">
+              <h4 className="fresco-sub-title">02 guided booking experience</h4>
+              <p className="fresco-sub-desc">
                 instead of overwhelming users with multiple options, the booking journey progressively reveals plans and services step by step. this creates a simpler, more focused experience that reduces confusion and encourages completion.
               </p>
             </div>
           </div>
           <div className="fresco-image-container">
-            <img src={fresco7} alt="Guided Booking Experience Interface" className="fresco-case-image" />
+            <img src={frescoGuidedBooking} alt="Guided Booking Experience Interface" className="fresco-case-image" />
           </div>
         </div>
 
@@ -216,17 +223,16 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
 
         {/* SECTION 8: How I Solved It - 03 Building Trust Through Design */}
         <div className="fresco-html-section">
-          <div className="fresco-solution-header">
-            <span className="fresco-solution-num">03</span>
-            <div className="fresco-solution-title-wrap">
-              <h3 className="fresco-solution-title">building trust through design</h3>
-              <p className="fresco-solution-desc">
+          <div className="fresco-section-header">
+            <div className="fresco-sub-header">
+              <h4 className="fresco-sub-title">03 building trust through design</h4>
+              <p className="fresco-sub-desc">
                 the homepage was designed to establish credibility from the first interaction by combining authentic visuals, live customer reviews, transparent pricing, and a short process video that clearly explains how the service works.
               </p>
             </div>
           </div>
           <div className="fresco-image-container">
-            <img src={fresco8} alt="Building Trust Through Design Interface" className="fresco-case-image" />
+            <img src={frescoBuildingTrust} alt="Building Trust Through Design Interface" className="fresco-case-image" />
           </div>
         </div>
 
@@ -244,7 +250,7 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
             </div>
           </div>
           <div className="fresco-image-container">
-            <img src={fresco9} alt="Final Design System & Component Handoff" className="fresco-case-image" />
+            <img src={frescoFinalDesign} alt="Final Design System & Component Handoff" className="fresco-case-image" />
           </div>
         </div>
 
@@ -262,7 +268,7 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
             </div>
           </div>
           <div className="fresco-image-container">
-            <img src={fresco10} alt="Responsive Across Desktop and Mobile Devices" className="fresco-case-image" />
+            <img src={frescoResponsive} alt="Responsive Across Desktop and Mobile Devices" className="fresco-case-image" />
           </div>
         </div>
 
@@ -290,8 +296,6 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
             </div>
           </div>
         </div>
-
-        <div className="fresco-section-divider" />
 
         {/* SECTION 12: More Projects */}
         <div className="fresco-html-section">

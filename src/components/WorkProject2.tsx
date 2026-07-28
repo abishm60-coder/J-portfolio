@@ -442,6 +442,15 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
             </div>
           </div>
         </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 17: More Projects */}
+        <div className="project2-html-section" style={{ paddingBottom: '60px' }}>
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">More Projects</h2>
+          </div>
+        </div>
       </div>
     </div>
   );

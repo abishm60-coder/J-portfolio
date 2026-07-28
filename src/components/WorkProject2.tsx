@@ -218,6 +218,31 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
           <div className="project2-image-container">
             <img src={project2Research} alt="Research & Insights" className="project2-case-image" />
           </div>
+
+          <div className="project2-section-header" style={{ marginTop: '36px' }}>
+            <h3 className="project2-section-heading" style={{ fontSize: '1.5rem', marginBottom: '20px' }}>key insights</h3>
+            
+            <div className="project2-sub-header" style={{ marginBottom: '20px' }}>
+              <h4 className="project2-sub-title">preview before commitment</h4>
+              <p className="project2-sub-desc">
+                businesses need enough information to judge an expert's thinking before unlocking their complete solution.
+              </p>
+            </div>
+
+            <div className="project2-sub-header" style={{ marginBottom: '20px' }}>
+              <h4 className="project2-sub-title">trust influences selection</h4>
+              <p className="project2-sub-desc">
+                ratings, reviews, experience, and expertise become critical when multiple experts respond to the same challenge.
+              </p>
+            </div>
+
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">solutions need execution</h4>
+              <p className="project2-sub-desc">
+                the experience shouldn't stop after delivering advice. users need actionable tasks, feedback, and progress visibility to actually solve the challenge.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

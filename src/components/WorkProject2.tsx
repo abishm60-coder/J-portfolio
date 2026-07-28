@@ -354,6 +354,21 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
             <img src={project2TaskExecution} alt="Task Execution Board & Interface" className="project2-case-image" />
           </div>
         </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 13: Trust Loop */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">Trust Loop</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">trust grows with every solution</h4>
+              <p className="project2-sub-desc">
+                after completing a collaboration, businesses can rate and review the expert. these ratings appear alongside future teaser submissions, helping other businesses evaluate experts with greater confidence.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

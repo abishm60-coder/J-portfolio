@@ -7,6 +7,7 @@ import project2AdviceToAction from '../assets/project2_advice_to_action.png';
 import project2TrustCollaboration from '../assets/project2_trust_collaboration.png';
 import project2Research from '../assets/project2_research.png';
 import project2DesignProcess from '../assets/project2_design_process.png';
+import project2ChallengeSubmission from '../assets/project2_challenge_submission.png';
 import sec1 from '../assets/project2_sec1.png';
 import sec2 from '../assets/project2_sec2.png';
 import sec3 from '../assets/project2_sec3.png';
@@ -276,6 +277,9 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
                 businesses can structure their challenge around the problem, objectives, scope, constraints, budget, and supporting documents—giving experts enough context to understand the problem before responding.
               </p>
             </div>
+          </div>
+          <div className="project2-image-container">
+            <img src={project2ChallengeSubmission} alt="Challenge Details & Submission Interface" className="project2-case-image" />
           </div>
         </div>
       </div>

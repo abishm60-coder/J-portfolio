@@ -296,9 +296,16 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div style={{ width: '100%', maxWidth: '1300px', padding: '0 40px', margin: '0 auto', boxSizing: 'border-box' }}>
+        <div className="fresco-section-divider" style={{ margin: '50px 0 30px 0' }} />
 
         {/* SECTION 12: More Projects */}
-        <div className="fresco-html-section">
+        <div className="fresco-html-section" style={{ paddingBottom: '60px' }}>
+          <div className="fresco-section-header">
+            <h2 className="fresco-section-heading">More Projects</h2>
+          </div>
           <div className="fresco-image-container">
             <img src={fresco12} alt="Explore More Projects" className="fresco-case-image" />
           </div>

@@ -244,6 +244,21 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
             </div>
           </div>
         </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 8: Design Process */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">Design Process</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">from challenge to resolution</h4>
+              <p className="project2-sub-desc">
+                instead of showing a generic design-process timeline, i'd use the actual product mental model here.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

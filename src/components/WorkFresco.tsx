@@ -4,6 +4,7 @@ import './WorkFresco.css';
 
 // Import the Fresco Laundry case study visual assets
 import fresco1 from '../assets/fresco_1.png';
+import fresco2 from '../assets/fresco_2.png';
 import fresco3 from '../assets/fresco_3.png';
 import fresco4 from '../assets/fresco_4.png';
 import frescoResearchMethods from '../assets/fresco_research_methods.png';
@@ -142,25 +143,8 @@ export const WorkFresco: React.FC<WorkFrescoProps> = ({ onBack }) => {
               </p>
             </div>
           </div>
-          <div className="fresco-reflection-grid" style={{ marginTop: '20px' }}>
-            <div className="fresco-reflection-card">
-              <h5 className="fresco-reflection-card-title" style={{ color: '#ffffff', borderBottom: '1px solid #1f1f1f', paddingBottom: '12px', marginBottom: '12px' }}>Customer Challenges</h5>
-              <ul style={{ margin: 0, paddingLeft: '20px', color: '#b0b0b0', fontSize: '0.9rem', lineHeight: '1.7' }}>
-                <li style={{ marginBottom: '8px', fontStyle: 'italic' }}>unclear service availability by location</li>
-                <li style={{ marginBottom: '8px', fontStyle: 'italic' }}>long and confusing booking process</li>
-                <li style={{ marginBottom: '8px', fontStyle: 'italic' }}>limited trust during the first visit</li>
-                <li style={{ fontStyle: 'italic' }}>pricing wasn't immediately accessible</li>
-              </ul>
-            </div>
-            <div className="fresco-reflection-card">
-              <h5 className="fresco-reflection-card-title" style={{ color: '#ffffff', borderBottom: '1px solid #1f1f1f', paddingBottom: '12px', marginBottom: '12px' }}>Business Challenges</h5>
-              <ul style={{ margin: 0, paddingLeft: '20px', color: '#b0b0b0', fontSize: '0.9rem', lineHeight: '1.7' }}>
-                <li style={{ marginBottom: '8px', fontStyle: 'italic' }}>low website conversion rate</li>
-                <li style={{ marginBottom: '8px', fontStyle: 'italic' }}>difficulty communicating premium service quality</li>
-                <li style={{ marginBottom: '8px', fontStyle: 'italic' }}>weak trust among first-time customers</li>
-                <li style={{ fontStyle: 'italic' }}>limited visibility of offers and service benefits</li>
-              </ul>
-            </div>
+          <div className="fresco-image-container" style={{ marginTop: '20px' }}>
+            <img src={fresco2} alt="Problem Statement - Customer & Business Challenges" className="fresco-case-image" />
           </div>
         </div>
 

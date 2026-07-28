@@ -10,6 +10,7 @@ import project2DesignProcess from '../assets/project2_design_process.png';
 import project2ChallengeSubmission from '../assets/project2_challenge_submission.png';
 import project2ExpertTeasers from '../assets/project2_expert_teasers.png';
 import project2SolutionUnlocking from '../assets/project2_solution_unlocking.png';
+import project2TaskExecution from '../assets/project2_task_execution.png';
 import sec1 from '../assets/project2_sec1.png';
 import sec2 from '../assets/project2_sec2.png';
 import sec3 from '../assets/project2_sec3.png';
@@ -348,6 +349,9 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="project2-image-container">
+            <img src={project2TaskExecution} alt="Task Execution Board & Interface" className="project2-case-image" />
           </div>
         </div>
       </div>

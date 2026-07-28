@@ -306,6 +306,26 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
             <img src={project2ExpertTeasers} alt="Expert Teasers Comparison Interface" className="project2-case-image" />
           </div>
         </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 11: Solution Unlocking */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">Solution Unlocking</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">unlock & collaborate</h4>
+              <div className="project2-sub-desc">
+                <p style={{ margin: '0 0 16px 0' }}>
+                  once a business identifies the strongest approach, it can unlock the expert's full solution based on its plan.
+                </p>
+                <p style={{ margin: 0 }}>
+                  the unlocked experience provides access to supporting documents, structured tasks, expert guidance, and continued collaboration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

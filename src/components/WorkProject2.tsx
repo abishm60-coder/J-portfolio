@@ -119,7 +119,7 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
 
         <div className="project2-section-divider" />
 
-        {/* SECTION 3: Problem Statement */}
+        {/* SECTION 3: Problem Statement & Choosing the Right Expert */}
         <div className="project2-html-section">
           <div className="project2-section-header">
             <h2 className="project2-section-heading">Problem Statement</h2>
@@ -135,14 +135,8 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="project2-section-divider" />
-
-        {/* SECTION 4: How I Solved It - 01 Choosing the Right Expert */}
-        <div className="project2-html-section">
-          <div className="project2-section-header">
-            <h2 className="project2-section-heading">How I Solved It</h2>
+          
+          <div className="project2-section-header" style={{ marginTop: '24px' }}>
             <div className="project2-sub-header">
               <h4 className="project2-sub-title">01 choosing the right expert</h4>
               <div className="project2-sub-desc">
@@ -159,9 +153,10 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
 
         <div className="project2-section-divider" />
 
-        {/* SECTION 5: How I Solved It - 02 Moving from Advice to Action */}
+        {/* SECTION 4: How I Solved It - 02 Moving from Advice to Action */}
         <div className="project2-html-section">
           <div className="project2-section-header">
+            <h2 className="project2-section-heading">How I Solved It</h2>
             <div className="project2-sub-header">
               <h4 className="project2-sub-title">02 moving from advice to action</h4>
               <p className="project2-sub-desc">

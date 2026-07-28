@@ -8,6 +8,7 @@ import project2TrustCollaboration from '../assets/project2_trust_collaboration.p
 import project2Research from '../assets/project2_research.png';
 import project2DesignProcess from '../assets/project2_design_process.png';
 import project2ChallengeSubmission from '../assets/project2_challenge_submission.png';
+import project2ExpertTeasers from '../assets/project2_expert_teasers.png';
 import sec1 from '../assets/project2_sec1.png';
 import sec2 from '../assets/project2_sec2.png';
 import sec3 from '../assets/project2_sec3.png';
@@ -300,6 +301,9 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="project2-image-container">
+            <img src={project2ExpertTeasers} alt="Expert Teasers Comparison Interface" className="project2-case-image" />
           </div>
         </div>
       </div>

@@ -454,6 +454,22 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
           <div className="project2-image-container">
             <img src={project2MoreProjects} alt="Explore More Projects" className="project2-case-image" />
           </div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '40px', padding: '0 10px', boxSizing: 'border-box' }}>
+            <div 
+              style={{ display: 'flex', gap: '16px', alignItems: 'baseline', cursor: 'pointer' }}
+              onClick={() => window.location.hash = '#/project/proj-1'}
+            >
+              <span style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.5px', fontFamily: 'var(--font-body, sans-serif)' }}>PROJECT 01</span>
+              <span style={{ fontSize: '0.85rem', fontWeight: 500, color: '#888888', letterSpacing: '1px', fontFamily: 'var(--font-body, sans-serif)' }}>PRODUCT DESIGN</span>
+            </div>
+            <div 
+              style={{ display: 'flex', gap: '16px', alignItems: 'baseline', cursor: 'pointer' }}
+              onClick={() => window.location.hash = '#/project/proj-3'}
+            >
+              <span style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.5px', fontFamily: 'var(--font-body, sans-serif)' }}>PROJECT 03</span>
+              <span style={{ fontSize: '0.85rem', fontWeight: 500, color: '#888888', letterSpacing: '1px', fontFamily: 'var(--font-body, sans-serif)' }}>PRODUCT DESIGN</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

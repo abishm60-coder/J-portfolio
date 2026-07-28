@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import './WorkProject2.css';
 import project2Hero from '../assets/project2_hero.png';
+import project2ChooseExpert from '../assets/project2_choose_expert.png';
 import sec1 from '../assets/project2_sec1.png';
 import sec2 from '../assets/project2_sec2.png';
 import sec3 from '../assets/project2_sec3.png';
@@ -148,6 +149,9 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="project2-image-container">
+            <img src={project2ChooseExpert} alt="Choosing the Right Expert Interface" className="project2-case-image" />
           </div>
         </div>
 

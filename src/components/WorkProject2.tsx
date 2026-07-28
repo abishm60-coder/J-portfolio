@@ -373,6 +373,21 @@ export const WorkProject2: React.FC<WorkProject2Props> = ({ onBack }) => {
             <img src={project2TrustLoop} alt="Trust Loop Ratings & Feedback Interface" className="project2-case-image" />
           </div>
         </div>
+
+        <div className="project2-section-divider" />
+
+        {/* SECTION 14: Design System */}
+        <div className="project2-html-section">
+          <div className="project2-section-header">
+            <h2 className="project2-section-heading">Design System</h2>
+            <div className="project2-sub-header">
+              <h4 className="project2-sub-title">built for clarity at scale</h4>
+              <p className="project2-sub-desc">
+                because the product contains challenges, expert responses, subscriptions, payments, tasks, reviews, and multiple progress states, i built reusable patterns to keep complex workflows consistent and easy to scan.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
